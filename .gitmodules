@@ -1,0 +1,3 @@
+[submodule "GraphXAI"]
+	path = GraphXAI
+	url = git@github.com:joschka-gross/GraphXAI.git

@@ -1,0 +1,23 @@
+[project]
+name = "bcosgnn"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bcos>=0.1.2",
+    "graphxai",
+    "lightning>=2.5.0.post0",
+    "notebook>=7.3.2",
+    "pandas>=2.2.3",
+    "polaris-lib>=0.11.9",
+    "rdkit>=2024.9.5",
+    "seaborn>=0.13.2",
+    "torch>=2.6.0",
+    "torch-geometric>=2.6.1",
+    "torchvision>=0.21.0",
+    "useful-rdkit-utils>=0.55",
+]
+
+[tool.uv.sources]
+graphxai = { path = "GraphXAI" }

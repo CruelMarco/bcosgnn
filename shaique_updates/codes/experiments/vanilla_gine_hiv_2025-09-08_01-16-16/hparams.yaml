@@ -1,0 +1,11 @@
+batch_size: 64
+dataset: MoleculeNet-HIV
+epochs: 20
+experiment_id: vanilla_gine_hiv_2025-09-08_01-16-16
+hidden_channels: 128
+learning_rate: 0.001
+model_name: VanillaGINEClassifier
+num_layers: 3
+optimizer: Adam
+production_mode: true
+seed: 42

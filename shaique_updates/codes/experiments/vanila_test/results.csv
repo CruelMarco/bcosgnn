@@ -1,0 +1,11 @@
+experiment_id,dataset,split,model_name,commit,metric_name,metric_value,seed,B,epoch
+vanila_test,ZINC_SMALL,train,VanillaGNN,N/A,mae,1.3019,42,NaN,1
+vanila_test,ZINC_SMALL,val,VanillaGNN,N/A,mae,1.2684,42,NaN,1
+vanila_test,ZINC_SMALL,train,VanillaGNN,N/A,mae,1.0800,42,NaN,2
+vanila_test,ZINC_SMALL,val,VanillaGNN,N/A,mae,1.0343,42,NaN,2
+vanila_test,ZINC_SMALL,train,VanillaGNN,N/A,mae,0.8515,42,NaN,3
+vanila_test,ZINC_SMALL,val,VanillaGNN,N/A,mae,0.8367,42,NaN,3
+vanila_test,ZINC_SMALL,train,VanillaGNN,N/A,mae,0.7635,42,NaN,4
+vanila_test,ZINC_SMALL,val,VanillaGNN,N/A,mae,0.7664,42,NaN,4
+vanila_test,ZINC_SMALL,test,VanillaGNN,N/A,mae,0.8164,42,NaN,4
+vanila_test,ZINC_SMALL,test,VanillaGNN,N/A,r2,0.5623,42,NaN,4

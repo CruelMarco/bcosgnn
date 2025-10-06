@@ -1,0 +1,9 @@
+batch_size: 256
+dataset: ZINC_SMALL
+epochs: 101
+experiment_id: gnn_reg_cip
+hidden_channels: 64
+learning_rate: 0.0001
+model_name: VanillaGNN
+optimizer: Adam
+seed: 42
