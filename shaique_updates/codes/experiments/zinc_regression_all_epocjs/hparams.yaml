@@ -1,9 +1,0 @@
-batch_size: 128
-dataset: ZINC_SMALL
-epochs: 101
-experiment_id: zinc_regression_all_epocjs
-hidden_channels: 64
-learning_rate: 0.001
-model_name: VanillaGNN
-optimizer: Adam
-seed: 42

@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Literal, Type
 from torch.nn import Module, ModuleList, Sequential, Dropout
-from torch_geometric.nn.conv import GINEConv
+from torch_geometric.nn.conv import GINEConv, GINConv
 from torch_geometric.nn.aggr import MeanAggregation, SumAggregation
 
 from bcos.modules import BcosLinear
@@ -102,6 +102,12 @@ class BcosGINE(BcosGNN):
             train_eps=False,
         )
 
+class BcosGIN(BcosGNN):
+    def make_conv(self):
+        return GINConv(
+            self.make_linear(self.hidden_channels, self.hidden_channels),
+            train_eps=False,
+        )
 
 class BcosMPNN(BcosGNN):
     def make_conv(self):
