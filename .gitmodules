@@ -1,3 +1,6 @@
 [submodule "GraphXAI"]
 	path = GraphXAI
 	url = git@github.com:joschka-gross/GraphXAI.git
+[submodule "RINGS_v2/rings"]
+	path = RINGS_v2/rings
+	url = https://github.com/aidos-lab/rings.git

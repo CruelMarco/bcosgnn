@@ -10,6 +10,10 @@ shaique_updates/codes/dataset
 shaique_updates/codes/outputs
 # Lightning goutputs
 lightning_logs/
+RINGS_v2/data
+
+# macOS cruft
+.DS_Store
 
 
 # Byte-compiled / optimized / DLL files
