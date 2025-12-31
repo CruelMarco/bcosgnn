@@ -11,6 +11,7 @@ shaique_updates/codes/outputs
 # Lightning goutputs
 lightning_logs/
 RINGS_v2/data
+data/
 
 # macOS cruft
 .DS_Store
