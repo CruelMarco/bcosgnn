@@ -10,6 +10,7 @@ def explain(
     edge_attr: Tensor | None = None,
     *other_inputs: Tensor,
     target: int | Tensor | None = None,
+    contrast: tuple[int, int] | None = None,
 ) -> dict[str, Tensor | None]:
     """BCos 'Alignment is all you need' explanations for node + (optional) edge attributes.
 
@@ -36,6 +37,9 @@ def explain(
         forward_args = (input_x, edge_index, *other_inputs)
         backward_inputs = [input_x]
 
+    if contrast is not None and target is not None:
+        raise ValueError("Pass only one of `target` or `contrast`.")
+
     with enable_grad(), explanation_mode(model):
         out = model(*forward_args)
 
@@ -43,7 +47,12 @@ def explain(
         # - target=None: match original behavior (max logit for multi-logit outputs).
         # - target=int: explain that class logit for all items.
         # - target=Tensor: per-item class indices (shape [B]) for batched outputs.
-        if target is None:
+        if contrast is not None:
+            if out.dim() == 0 or out.shape[-1] <= 1:
+                raise ValueError("`contrast` requires a multi-logit model output.")
+            c_pos, c_neg = contrast
+            prediction_logit = out[..., c_pos] - out[..., c_neg]
+        elif target is None:
             if out.dim() > 1 and out.shape[-1] > 1:
                 prediction_logit = out.max(dim=-1).values
             else:
