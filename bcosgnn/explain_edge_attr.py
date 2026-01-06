@@ -12,8 +12,7 @@ def explain(
     target: int | Tensor | None = None,
     contrast: tuple[int, int] | None = None,
 ) -> dict[str, Tensor | None]:
-    """BCos 'Alignment is all you need' explanations for node + (optional) edge attributes.
-
+    """
     This is the edge-aware analogue of `bcosgnn.explain.explain`.
 
     - If `edge_attr` is provided, we attribute w.r.t. both `x` and `edge_attr`.
