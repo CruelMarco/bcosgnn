@@ -4,6 +4,92 @@ from sklearn.metrics import roc_auc_score
 from tqdm import tqdm
 from bcosgnn.explain import explain
 
+try:
+    from torch_geometric.explain import Explainer as PyGExplainer
+except Exception:  # pragma: no cover
+    PyGExplainer = None
+
+
+def _reduce_node_mask_to_scores(node_mask: np.ndarray) -> np.ndarray:
+    """Normalize PyG Explainer node masks into a flat per-node score vector."""
+    # node_mask can be [num_nodes], [num_nodes, 1], or [num_nodes, F]
+    if node_mask.ndim == 2:
+        node_mask = node_mask.mean(axis=1)
+    return node_mask.reshape(-1)
+
+
+@torch.no_grad()
+def _predict_class(model, data, threshold: float = 0.0) -> int:
+    model.eval()
+    batch = getattr(data, 'batch', None)
+    if batch is None:
+        batch = torch.zeros(data.x.size(0), dtype=torch.long, device=data.x.device)
+
+    out = model(data.x, data.edge_index, batch)
+    out = out.view(out.shape[0], -1) if out.dim() == 1 else out
+
+    # Binary (single logit) vs multi-class logits
+    if out.shape[-1] == 1:
+        return 1 if float(out.view(-1)[0].item()) > threshold else 0
+    return int(out.argmax(dim=-1).view(-1)[0].item())
+
+
+def get_gnnexplainer_scores(
+    explainer,
+    model,
+    data,
+    *,
+    target: int | None = None,
+):
+    """Run a (PyG) GNNExplainer-style explainer and return per-node scores.
+
+    Parameters
+    ----------
+    explainer:
+        A `torch_geometric.explain.Explainer` instance.
+    model:
+        The trained GNN.
+    data:
+        A `torch_geometric.data.Data` graph.
+    target:
+        Target class index to explain. If None, uses the model prediction.
+    """
+    if PyGExplainer is None:
+        raise RuntimeError(
+            "torch_geometric.explain is unavailable; please install a recent PyG version.",
+        )
+    if not isinstance(explainer, PyGExplainer):
+        raise TypeError(
+            "Expected explainer to be torch_geometric.explain.Explainer instance.",
+        )
+
+    data = data.clone()
+    device = next(model.parameters()).device
+    data = data.to(device)
+
+    batch = getattr(data, 'batch', None)
+    if batch is None:
+        batch = torch.zeros(data.x.size(0), dtype=torch.long, device=device)
+
+    if target is None:
+        target = _predict_class(model, data)
+
+    explanation = explainer(
+        x=data.x,
+        edge_index=data.edge_index,
+        edge_attr=getattr(data, 'edge_attr', None),
+        batch=batch,
+        target=target,
+    )
+
+    if explanation.node_mask is None:
+        raise RuntimeError("Explainer returned no node_mask.")
+
+    node_scores = _reduce_node_mask_to_scores(
+        explanation.node_mask.detach().cpu().numpy(),
+    )
+    return node_scores, int(target)
+
 def get_attribution_scores(model, data, method='gradient', batch=None, threshold=0.0):
 
     if batch is None:
@@ -115,3 +201,71 @@ def evaluate_auroc(model, dataset, method='gradient', transform=None):
             pass
             
     return np.mean(auroc_scores)
+
+
+def evaluate_gnnexplainer_jaccard(
+    explainer,
+    model,
+    dataset,
+    *,
+    transform=None,
+):
+    jaccard_scores = []
+
+    for data in tqdm(dataset, desc="Evaluating Jaccard (gnnexplainer)"):
+        if transform:
+            data_transformed = transform(data.clone())
+        else:
+            data_transformed = data.clone()
+
+        if not hasattr(data_transformed, 'node_mask'):
+            continue
+
+        gt_nodes = set(torch.where(data_transformed.node_mask.squeeze() == 1)[0].cpu().numpy())
+        k = len(gt_nodes)
+        if k == 0:
+            continue
+
+        try:
+            scores, _ = get_gnnexplainer_scores(explainer, model, data_transformed)
+            top_k_indices = np.argsort(scores)[-k:]
+            pred_nodes = set(top_k_indices)
+
+            intersection = len(gt_nodes.intersection(pred_nodes))
+            union = len(gt_nodes.union(pred_nodes))
+            jaccard_scores.append(intersection / union if union > 0 else 0.0)
+        except Exception:
+            jaccard_scores.append(0.0)
+
+    return float(np.mean(jaccard_scores)) if len(jaccard_scores) else float('nan')
+
+
+def evaluate_gnnexplainer_auroc(
+    explainer,
+    model,
+    dataset,
+    *,
+    transform=None,
+):
+    auroc_scores = []
+
+    for data in tqdm(dataset, desc="Evaluating AUROC (gnnexplainer)"):
+        if transform:
+            data_transformed = transform(data.clone())
+        else:
+            data_transformed = data.clone()
+
+        if not hasattr(data_transformed, 'node_mask'):
+            continue
+
+        gt_mask = data_transformed.node_mask.squeeze().detach().cpu().numpy()
+        if gt_mask.sum() == 0 or gt_mask.sum() == len(gt_mask):
+            continue
+
+        try:
+            scores, _ = get_gnnexplainer_scores(explainer, model, data_transformed)
+            auroc_scores.append(roc_auc_score(gt_mask, scores))
+        except Exception:
+            pass
+
+    return float(np.mean(auroc_scores)) if len(auroc_scores) else float('nan')
