@@ -25,7 +25,7 @@ def _predict_class(model, data, threshold: float = 0.0) -> int:
     if batch is None:
         batch = torch.zeros(data.x.size(0), dtype=torch.long, device=data.x.device)
 
-    out = model(data.x, data.edge_index, batch)
+    out = model(data.x, data.edge_index, data.edge_attr, batch)
     out = out.view(out.shape[0], -1) if out.dim() == 1 else out
 
     # Binary (single logit) vs multi-class logits
@@ -106,15 +106,15 @@ def get_attribution_scores(model, data, method='gradient', batch=None, threshold
         # Method A: Use the bcosgnn.explain.explain function written by Joschka
         # We still need the prediction to know if we should flip signs, this is handled in the notebook
         with torch.no_grad():
-            out = model(data.x, data.edge_index, batch)
+            out = model(data.x, data.edge_index, data.edge_attr, batch)
         pred_class = 1 if out.item() > threshold else 0
-        
-        node_contrib = explain(model, data.x, data.edge_index, batch).detach()
+
+        node_contrib = explain(model, data.x, data.edge_index, data.edge_attr, batch).detach()
         scores = node_contrib.sum(1)
         
     elif method in ['gradient', 'input_x_gradient']:
         with torch.enable_grad():
-            out = model(x, data.edge_index, batch)
+            out = model(x, data.edge_index, data.edge_attr, batch)
             out.backward()
             
         pred_class = 1 if out.item() > threshold else 0
