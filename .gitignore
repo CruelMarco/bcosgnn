@@ -13,6 +13,7 @@ lightning_logs/
 RINGS_v2/data
 data/
 shaique_updates/codes/multi_class_Zinc/zinc_di_halo_benzene_data
+shaique_updates/codes/seminar_codes_figures
 
 # macOS cruft
 .DS_Store
