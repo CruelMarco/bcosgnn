@@ -1,22 +1,30 @@
 import sys
+import os
 import copy
 import random
 from pathlib import Path
 
 current_dir = Path.cwd()
+script_dir = Path(__file__).resolve().parent
 
-def find_repo_root(start: Path) -> Path:
+def find_repo_root(start: Path) -> Path | None:
     for p in [start, *start.parents]:
         if (p / 'pyproject.toml').exists() and (p / 'bcosgnn').is_dir():
             return p
-    raise RuntimeError('Could not locate repo root (pyproject.toml + bcosgnn/).')
+    return None
 
-project_root = find_repo_root(current_dir) 
+project_root = find_repo_root(current_dir) or find_repo_root(script_dir)
 
-if str(project_root) not in sys.path:
-    sys.path.append(str(project_root))
+if project_root is not None:
+    if str(project_root) not in sys.path:
+        sys.path.append(str(project_root))
+    print(f"Repo root added: {project_root}")
+else:
+    print("Repo root not found in Condor scratch dir; using installed packages and local paths.")
+    project_root = script_dir
 
-print(f"Repo root added: {project_root}")
+default_data_root = project_root / 'data' / 'MNISTsp'
+data_root = Path(os.environ.get('MNISTSP_DATA_ROOT', str(default_data_root))).expanduser()
 
 import bcosgnn
 import torch
@@ -54,6 +62,8 @@ from torch_geometric.datasets import MNISTSuperpixels
 import torch.nn as nn
 from torch_geometric.nn import GINEConv, global_mean_pool, global_add_pool
 from sklearn.metrics import f1_score, accuracy_score
+from torch.utils.data import random_split
+
 
 def set_seed(seed: int) -> None:
     random.seed(seed)
