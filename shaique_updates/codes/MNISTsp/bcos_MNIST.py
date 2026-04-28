@@ -163,7 +163,6 @@ class BcosGINEConv(MessagePassing):
         train_eps: bool = False,
         **kwargs
     ):
-        # We use 'add' aggregation to stay true to the GIN formula
         kwargs.setdefault("aggr", "add")
         super().__init__(**kwargs)
         
@@ -182,8 +181,7 @@ class BcosGINEConv(MessagePassing):
             self.register_buffer("eps", torch.Tensor([eps]))
 
     def forward(self, x, edge_index, edge_attr):
-        # edge_attr is expected to be pre-projected to match x dimension
-        # in your main model loop.
+
         
         # 1. Propagate messages
         out = self.propagate(edge_index, x=x, edge_attr=edge_attr)
@@ -195,9 +193,7 @@ class BcosGINEConv(MessagePassing):
         return self.transform(out)
 
     def message(self, x_j, edge_attr):
-        # Standard GINE uses ReLU(x_j + edge_attr).
-        # In pure B-cos, we can use the addition, then the B-cos transform 
-        # in the 'forward' call handles the non-linear alignment.
+
         return torch.nn.functional.relu(x_j + edge_attr)
     
     ##############
