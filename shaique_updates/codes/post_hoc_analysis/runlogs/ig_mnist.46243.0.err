@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/raid/condor/lib/condor/execute/dir_1269872/IG_MNIST.py", line 115, in <module>
+    train_dataset, val_dataset, test_dataset, train_loader, val_loader, test_loader, dataset_info = load_and_split_data(batch_size=BATCH_SIZE)
+                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/condor/lib/condor/execute/dir_1269872/IG_MNIST.py", line 74, in load_and_split_data
+    raise FileNotFoundError(f"Could not find saved sparsified split files. Checked: {checked}")
+FileNotFoundError: Could not find saved sparsified split files. Checked: ['/raid/condor/lib/condor/execute/dir_1269872/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits', '/raid/condor/lib/condor/execute/dir_1269872/data/MNIST/sparsified_pt_splits']

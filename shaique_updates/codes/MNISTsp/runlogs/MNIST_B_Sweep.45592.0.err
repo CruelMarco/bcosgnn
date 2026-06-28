@@ -1,0 +1,4 @@
+  File "/raid/condor/lib/condor/execute/dir_1717402/bcos_MNIST.py", line 262
+    min_delta=0.0
+              ^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?

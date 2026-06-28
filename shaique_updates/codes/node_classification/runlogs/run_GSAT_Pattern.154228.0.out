@@ -1,0 +1,86 @@
+Using BCOSGNN_DATA_ROOT=/raid/condor/lib/condor/execute/dir_1585499/bcosgnn/data
+Repo root added: /raid/condor/lib/condor/execute/dir_1585499
+GSATNodeClassifier(
+  (backbone): GINNodeBackbone(
+    (conv1): MaskableGINConv()
+    (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv2): MaskableGINConv()
+    (bn2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv3): MaskableGINConv()
+    (bn3): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv4): MaskableGINConv()
+    (bn4): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (classifier): Linear(in_features=64, out_features=2, bias=True)
+  )
+  (att_mlp): Sequential(
+    (0): Linear(in_features=6, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=64, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+Number of training graphs: 10000
+Number of validation graphs: 2000
+Number of test graphs: 2000
+Using device: cuda
+Running seeds: [0, 1, 2, 3, 4]
+GSAT defaults -> temperature=1.0, r=0.7, pred_loss_coef=1.0, info_loss_coef=1.0
+
+--- Seed 0 ---
+Epoch 010 | Tr loss 0.9490 acc 0.8590 | Va loss 0.9169 acc 0.8739 f1 0.4752
+Epoch 020 | Tr loss 0.9463 acc 0.8602 | Va loss 0.9159 acc 0.8847 f1 0.5594
+Epoch 030 | Tr loss 0.9444 acc 0.8611 | Va loss 0.9130 acc 0.8640 f1 0.3915
+Epoch 040 | Tr loss 0.9445 acc 0.8613 | Va loss 0.9065 acc 0.8767 f1 0.4874
+Epoch 050 | Tr loss 0.9444 acc 0.8614 | Va loss 0.9349 acc 0.8475 f1 0.2483
+Early stopping at epoch 60 (best val loss: 0.9065)
+Seed 0 -> Test acc: 0.8785 | Test f1: 0.4969 | Test loss: 0.9043
+
+--- Seed 1 ---
+Epoch 010 | Tr loss 0.9539 acc 0.8564 | Va loss 0.9372 acc 0.8435 f1 0.2178
+Epoch 020 | Tr loss 0.9479 acc 0.8592 | Va loss 0.9307 acc 0.8538 f1 0.3134
+Epoch 030 | Tr loss 0.9450 acc 0.8608 | Va loss 0.9172 acc 0.8552 f1 0.3155
+Epoch 040 | Tr loss 0.9442 acc 0.8611 | Va loss 0.9233 acc 0.8536 f1 0.3242
+Epoch 050 | Tr loss 0.9436 acc 0.8614 | Va loss 0.9164 acc 0.8555 f1 0.3179
+Early stopping at epoch 52 (best val loss: 0.9095)
+Seed 1 -> Test acc: 0.8672 | Test f1: 0.4094 | Test loss: 0.9068
+
+--- Seed 2 ---
+Epoch 010 | Tr loss 0.9504 acc 0.8583 | Va loss 0.9319 acc 0.8531 f1 0.3048
+Epoch 020 | Tr loss 0.9462 acc 0.8603 | Va loss 0.9235 acc 0.8567 f1 0.3343
+Epoch 030 | Tr loss 0.9446 acc 0.8610 | Va loss 0.9342 acc 0.8529 f1 0.2974
+Epoch 040 | Tr loss 0.9444 acc 0.8615 | Va loss 0.9279 acc 0.8465 f1 0.2382
+Epoch 050 | Tr loss 0.9441 acc 0.8611 | Va loss 0.9185 acc 0.8557 f1 0.3199
+Epoch 060 | Tr loss 0.9440 acc 0.8615 | Va loss 0.9142 acc 0.8579 f1 0.3380
+Epoch 070 | Tr loss 0.9441 acc 0.8611 | Va loss 0.9111 acc 0.8655 f1 0.4005
+Early stopping at epoch 79 (best val loss: 0.9076)
+Seed 2 -> Test acc: 0.8692 | Test f1: 0.4229 | Test loss: 0.9050
+
+--- Seed 3 ---
+Epoch 010 | Tr loss 0.9524 acc 0.8574 | Va loss 0.9240 acc 0.8719 f1 0.4702
+Epoch 020 | Tr loss 0.9462 acc 0.8603 | Va loss 0.9216 acc 0.8817 f1 0.5365
+Epoch 030 | Tr loss 0.9455 acc 0.8606 | Va loss 0.9134 acc 0.8639 f1 0.3892
+Epoch 040 | Tr loss 0.9439 acc 0.8617 | Va loss 0.9110 acc 0.8763 f1 0.4856
+Epoch 050 | Tr loss 0.9437 acc 0.8617 | Va loss 0.9166 acc 0.8551 f1 0.3148
+Early stopping at epoch 56 (best val loss: 0.9102)
+Seed 3 -> Test acc: 0.8633 | Test f1: 0.3787 | Test loss: 0.9080
+
+--- Seed 4 ---
+Epoch 010 | Tr loss 0.9531 acc 0.8571 | Va loss 0.9514 acc 0.8422 f1 0.2250
+Epoch 020 | Tr loss 0.9472 acc 0.8596 | Va loss 0.9210 acc 0.8612 f1 0.3707
+Epoch 030 | Tr loss 0.9459 acc 0.8604 | Va loss 0.9252 acc 0.8506 f1 0.2758
+Epoch 040 | Tr loss 0.9439 acc 0.8613 | Va loss 0.9294 acc 0.8471 f1 0.2449
+Epoch 050 | Tr loss 0.9444 acc 0.8615 | Va loss 0.9209 acc 0.8525 f1 0.2918
+Epoch 060 | Tr loss 0.9435 acc 0.8615 | Va loss 0.9093 acc 0.8666 f1 0.4083
+Epoch 070 | Tr loss 0.9434 acc 0.8615 | Va loss 0.9136 acc 0.8604 f1 0.3594
+Epoch 080 | Tr loss 0.9435 acc 0.8613 | Va loss 0.9161 acc 0.8562 f1 0.3237
+Early stopping at epoch 83 (best val loss: 0.9087)
+Seed 4 -> Test acc: 0.8720 | Test f1: 0.4451 | Test loss: 0.9059
+
+=======================================================
+FINAL RESULTS (GIN + GSAT on PATTERN Node Classification)
+=======================================================
+Test Accuracy: 0.8700 ± 0.0051
+Test F1 Score: 0.4306 ± 0.0395
+Test Loss:     0.9060 ± 0.0013
+=======================================================

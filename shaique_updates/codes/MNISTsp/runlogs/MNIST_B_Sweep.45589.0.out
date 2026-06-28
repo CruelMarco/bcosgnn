@@ -1,0 +1,20 @@
+Using MNISTSP_SPLIT_ROOT=/home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Repo root not found in this execution context; using installed packages and local paths.
+Using data root: /raid/condor/lib/condor/execute/dir_1708600/data/MNISTsp
+Using MNISTSP_SPLIT_ROOT: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Avg train edges (first 1000 graphs): 66.31
+Node features: 3 (pos features added: True)
+Dataset info: {'num_node_features': 3, 'num_classes': 10, 'num_edge_features': 0}
+
+=== Seed 0 ===
+Using device: cuda
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Avg train edges (first 1000 graphs): 66.31
+Node features: 3 (pos features added: True)
+Starting BCos GIN training...
+Config -> epochs=100, batch_size=64, hidden=64, layers=4, use_scheduler=False, lr=0.005, early_stopping=True, patience=15

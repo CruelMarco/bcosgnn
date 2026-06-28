@@ -1,0 +1,103 @@
+DEVICE = cuda
+Repo root added: /raid/condor/lib/condor/execute/dir_88983
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Avg train edges: 66.31
+Node features: 4 (pos features added: True)
+
+=== Seed 11 ===
+  Epoch 001/100: tau=0.99 val_loss=2.5664
+  Epoch 005/100: tau=0.95 val_loss=0.9690
+  Epoch 010/100: tau=0.91 val_loss=0.7886
+  Epoch 015/100: tau=0.86 val_loss=0.6329
+  Epoch 020/100: tau=0.82 val_loss=0.5008
+  Epoch 025/100: tau=0.78 val_loss=0.4986
+  Epoch 030/100: tau=0.73 val_loss=0.4637
+  Epoch 035/100: tau=0.69 val_loss=0.4760
+  Epoch 040/100: tau=0.64 val_loss=0.4052
+  Epoch 045/100: tau=0.59 val_loss=0.3773
+  Epoch 050/100: tau=0.55 val_loss=0.4187
+  Epoch 055/100: tau=0.50 val_loss=0.4068
+  Epoch 060/100: tau=0.46 val_loss=0.3614
+  Epoch 065/100: tau=0.41 val_loss=0.3684
+  Epoch 070/100: tau=0.37 val_loss=0.3340
+  Epoch 075/100: tau=0.32 val_loss=0.3412
+  Epoch 080/100: tau=0.28 val_loss=0.3484
+  Epoch 085/100: tau=0.23 val_loss=0.3967
+  Epoch 090/100: tau=0.19 val_loss=0.4490
+  Epoch 095/100: tau=0.15 val_loss=0.3795
+  Early stopping at epoch 95
+Seed 11 | Test Acc 0.8950 | Test F1 0.8945 | Node AUROC 0.8236 | Node F1 0.6386 | Node Jaccard 0.4849 | Train 250.49s | TestProc 0.08s | Explain 1.79s (1.79 ms/graph)
+
+=== Seed 22 ===
+  Epoch 001/100: tau=0.99 val_loss=1.6447
+  Epoch 005/100: tau=0.95 val_loss=0.9910
+  Epoch 010/100: tau=0.91 val_loss=0.8268
+  Epoch 015/100: tau=0.86 val_loss=0.5873
+  Epoch 020/100: tau=0.82 val_loss=0.4986
+  Epoch 025/100: tau=0.78 val_loss=0.5659
+  Epoch 030/100: tau=0.73 val_loss=0.4585
+  Epoch 035/100: tau=0.69 val_loss=0.3880
+  Epoch 040/100: tau=0.64 val_loss=0.4522
+  Epoch 045/100: tau=0.59 val_loss=0.3672
+  Epoch 050/100: tau=0.55 val_loss=0.4416
+  Epoch 055/100: tau=0.50 val_loss=0.3654
+  Epoch 060/100: tau=0.46 val_loss=0.3991
+  Epoch 065/100: tau=0.41 val_loss=0.3361
+  Epoch 070/100: tau=0.37 val_loss=0.3870
+  Epoch 075/100: tau=0.32 val_loss=0.3733
+  Epoch 080/100: tau=0.28 val_loss=0.3733
+  Epoch 085/100: tau=0.23 val_loss=0.3491
+  Epoch 090/100: tau=0.19 val_loss=0.3361
+  Epoch 095/100: tau=0.15 val_loss=0.3619
+  Epoch 100/100: tau=0.10 val_loss=0.3320
+Seed 22 | Test Acc 0.8840 | Test F1 0.8833 | Node AUROC 0.8624 | Node F1 0.7271 | Node Jaccard 0.5846 | Train 279.79s | TestProc 0.08s | Explain 1.79s (1.79 ms/graph)
+
+=== Seed 33 ===
+  Epoch 001/100: tau=0.99 val_loss=1.9581
+  Epoch 005/100: tau=0.95 val_loss=0.7613
+  Epoch 010/100: tau=0.91 val_loss=0.8066
+  Epoch 015/100: tau=0.86 val_loss=0.5382
+  Epoch 020/100: tau=0.82 val_loss=0.4614
+  Epoch 025/100: tau=0.78 val_loss=0.4290
+  Epoch 030/100: tau=0.73 val_loss=0.4793
+  Epoch 035/100: tau=0.69 val_loss=0.4558
+  Epoch 040/100: tau=0.64 val_loss=0.4807
+  Epoch 045/100: tau=0.59 val_loss=0.3860
+  Epoch 050/100: tau=0.55 val_loss=0.3770
+  Epoch 055/100: tau=0.50 val_loss=0.4286
+  Epoch 060/100: tau=0.46 val_loss=0.3794
+  Epoch 065/100: tau=0.41 val_loss=0.4048
+  Epoch 070/100: tau=0.37 val_loss=0.3679
+  Epoch 075/100: tau=0.32 val_loss=0.3746
+  Epoch 080/100: tau=0.28 val_loss=0.3347
+  Epoch 085/100: tau=0.23 val_loss=0.3402
+  Epoch 090/100: tau=0.19 val_loss=0.3430
+  Epoch 095/100: tau=0.15 val_loss=0.3476
+  Epoch 100/100: tau=0.10 val_loss=0.3525
+Seed 33 | Test Acc 0.9050 | Test F1 0.9046 | Node AUROC 0.8601 | Node F1 0.7182 | Node Jaccard 0.5749 | Train 279.49s | TestProc 0.08s | Explain 1.79s (1.79 ms/graph)
+
+====================================================================================
+MULTI-SEED SUMMARY (mean ± std)
+====================================================================================
+test_acc              : 0.8947 ± 0.0086
+test_f1               : 0.8941 ± 0.0087
+global_edge_auc       : 0.4762 ± 0.0772
+node_auroc            : 0.8487 ± 0.0178
+node_f1               : 0.6946 ± 0.0398
+node_jaccard          : 0.5481 ± 0.0449
+train_time_s          : 269.9251 ± 13.7415
+test_process_total_s  : 0.0830 ± 0.0015
+explain_total_s       : 1.7922 ± 0.0003
+mean_ms               : 1.7922 ± 0.0003
+median_ms             : 1.7862 ± 0.0004
+p90_ms                : 1.8051 ± 0.0036
+graphs_per_s          : 557.9847 ± 0.0893
+------------------------------------------------------------------------------------
+Total explanation time over all seeds    : 5.3765 s
+Total test processing time over all seeds: 0.2489 s
+Total training time over all seeds       : 809.7752 s
+{'seed': 11, 'test_acc': 0.895, 'test_f1': 0.8944886331610544, 'global_edge_auc': 0.3714240848785405, 'node_auroc': 0.8236068, 'node_f1': 0.6385999947445601, 'node_jaccard': 0.4849412429412566, 'train_time_s': 250.49243402667344, 'test_process_total_s': 0.08341183885931969, 'explain_total_s': 1.7917636977508664, 'mean_ms': 1.7917636977508664, 'median_ms': 1.786013599485159, 'p90_ms': 1.810088474303484, 'graphs_per_s': 558.109309422477, 'n_graphs': 1000}
+{'seed': 22, 'test_acc': 0.884, 'test_f1': 0.8833023214309128, 'global_edge_auc': 0.5552576728969375, 'node_auroc': 0.8623676, 'node_f1': 0.727079994709168, 'node_jaccard': 0.584574309875488, 'train_time_s': 279.79432782903314, 'test_process_total_s': 0.08446748275309801, 'explain_total_s': 1.7924221642315388, 'mean_ms': 1.7924221642315388, 'median_ms': 1.7857886850833893, 'p90_ms': 1.8023212440311909, 'graphs_per_s': 557.9042816783779, 'n_graphs': 1000}
+{'seed': 33, 'test_acc': 0.905, 'test_f1': 0.9046035632092468, 'global_edge_auc': 0.5018538649112856, 'node_auroc': 0.8600971999999999, 'node_f1': 0.7181599947127361, 'node_jaccard': 0.5749099982899505, 'train_time_s': 279.4884456023574, 'test_process_total_s': 0.0809979047626257, 'explain_total_s': 1.7923055374994874, 'mean_ms': 1.7923055374994874, 'median_ms': 1.7867693677544594, 'p90_ms': 1.8027459271252155, 'graphs_per_s': 557.9405849491139, 'n_graphs': 1000}

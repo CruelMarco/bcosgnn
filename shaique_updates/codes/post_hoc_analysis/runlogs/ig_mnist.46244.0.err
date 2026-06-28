@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/raid/condor/lib/condor/execute/dir_1271739/IG_MNIST.py", line 487, in <module>
+    ig_multi_seed_results = run_multi_seed_ig_experiment(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/condor/lib/condor/execute/dir_1271739/IG_MNIST.py", line 419, in run_multi_seed_ig_experiment
+    model_seed, train_time_s = train_ig_one_seed(
+                               ^^^^^^^^^^^^^^^^^^
+  File "/raid/condor/lib/condor/execute/dir_1271739/IG_MNIST.py", line 364, in train_ig_one_seed
+    hidden_channels=HIDDEN_DIM,
+                    ^^^^^^^^^^
+NameError: name 'HIDDEN_DIM' is not defined

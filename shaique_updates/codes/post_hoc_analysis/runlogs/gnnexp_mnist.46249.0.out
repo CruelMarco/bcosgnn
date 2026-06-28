@@ -1,0 +1,109 @@
+DEVICE = cuda
+Repo root added: /raid/condor/lib/condor/execute/dir_1329920
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Node features: 4 (pos features added: True)
+
+=== Seed 11 ===
+  Epoch 001/100: train_acc=0.2927 val_acc=0.4202 val_loss=1.6206
+  Epoch 005/100: train_acc=0.6581 val_acc=0.7688 val_loss=0.7165
+  Epoch 010/100: train_acc=0.7468 val_acc=0.8272 val_loss=0.5458
+  Epoch 015/100: train_acc=0.7710 val_acc=0.7952 val_loss=0.6195
+  Epoch 020/100: train_acc=0.7896 val_acc=0.8392 val_loss=0.5199
+  Epoch 025/100: train_acc=0.8044 val_acc=0.8556 val_loss=0.4758
+  Epoch 030/100: train_acc=0.8134 val_acc=0.8694 val_loss=0.4160
+  Epoch 035/100: train_acc=0.8177 val_acc=0.8398 val_loss=0.5183
+  Epoch 040/100: train_acc=0.8266 val_acc=0.8678 val_loss=0.4351
+  Epoch 045/100: train_acc=0.8362 val_acc=0.8736 val_loss=0.4147
+  Epoch 050/100: train_acc=0.8438 val_acc=0.8772 val_loss=0.3960
+  Epoch 055/100: train_acc=0.8460 val_acc=0.8730 val_loss=0.4112
+  Epoch 060/100: train_acc=0.8532 val_acc=0.8876 val_loss=0.3700
+  Epoch 065/100: train_acc=0.8524 val_acc=0.8792 val_loss=0.3986
+  Epoch 070/100: train_acc=0.8577 val_acc=0.8664 val_loss=0.4496
+  Epoch 075/100: train_acc=0.8795 val_acc=0.8996 val_loss=0.3571
+  Epoch 080/100: train_acc=0.8787 val_acc=0.8862 val_loss=0.4108
+  Epoch 085/100: train_acc=0.8851 val_acc=0.8898 val_loss=0.3811
+  Epoch 090/100: train_acc=0.8968 val_acc=0.8946 val_loss=0.3697
+  Epoch 095/100: train_acc=0.8982 val_acc=0.9016 val_loss=0.3767
+  Epoch 100/100: train_acc=0.9073 val_acc=0.9064 val_loss=0.3550
+Evaluating Explainer...
+Evaluating Jaccard on 1000 graphs...
+Evaluating AUROC on 1000 graphs...
+Seed 11 Results:
+Test Acc: 0.8970 | Node Jaccard: 0.1783 | Node AUROC: 0.4668
+Explainer Time: 2223.35s (2223.35 ms/graph)
+
+=== Seed 22 ===
+  Epoch 001/100: train_acc=0.2978 val_acc=0.4110 val_loss=1.6809
+  Epoch 005/100: train_acc=0.6691 val_acc=0.6830 val_loss=0.9339
+  Epoch 010/100: train_acc=0.7615 val_acc=0.7822 val_loss=0.6596
+  Epoch 015/100: train_acc=0.7947 val_acc=0.8234 val_loss=0.5416
+  Epoch 020/100: train_acc=0.8088 val_acc=0.8406 val_loss=0.4951
+  Epoch 025/100: train_acc=0.8182 val_acc=0.8652 val_loss=0.4270
+  Epoch 030/100: train_acc=0.8285 val_acc=0.8654 val_loss=0.4487
+  Epoch 035/100: train_acc=0.8427 val_acc=0.8558 val_loss=0.4745
+  Epoch 040/100: train_acc=0.8488 val_acc=0.8608 val_loss=0.4293
+  Epoch 045/100: train_acc=0.8515 val_acc=0.8672 val_loss=0.4357
+  Epoch 050/100: train_acc=0.8703 val_acc=0.9070 val_loss=0.3149
+  Epoch 055/100: train_acc=0.8761 val_acc=0.9010 val_loss=0.3457
+  Epoch 060/100: train_acc=0.8835 val_acc=0.8912 val_loss=0.3695
+  Epoch 065/100: train_acc=0.8955 val_acc=0.9102 val_loss=0.3177
+  Epoch 070/100: train_acc=0.8967 val_acc=0.9060 val_loss=0.3194
+  Epoch 075/100: train_acc=0.9042 val_acc=0.9084 val_loss=0.3160
+  Epoch 080/100: train_acc=0.9030 val_acc=0.9070 val_loss=0.3295
+  Epoch 085/100: train_acc=0.9098 val_acc=0.9086 val_loss=0.3303
+  Epoch 090/100: train_acc=0.9084 val_acc=0.9092 val_loss=0.3313
+  Epoch 095/100: train_acc=0.9130 val_acc=0.9066 val_loss=0.3315
+  Early stopping at epoch 98
+Evaluating Explainer...
+Evaluating Jaccard on 1000 graphs...
+Evaluating AUROC on 1000 graphs...
+Seed 22 Results:
+Test Acc: 0.9120 | Node Jaccard: 0.1853 | Node AUROC: 0.4656
+Explainer Time: 2193.30s (2193.30 ms/graph)
+
+=== Seed 33 ===
+  Epoch 001/100: train_acc=0.2898 val_acc=0.4198 val_loss=1.6586
+  Epoch 005/100: train_acc=0.6905 val_acc=0.7840 val_loss=0.6923
+  Epoch 010/100: train_acc=0.7835 val_acc=0.7612 val_loss=0.7122
+  Epoch 015/100: train_acc=0.8082 val_acc=0.8382 val_loss=0.4935
+  Epoch 020/100: train_acc=0.8216 val_acc=0.8162 val_loss=0.5933
+  Epoch 025/100: train_acc=0.8340 val_acc=0.8830 val_loss=0.3815
+  Epoch 030/100: train_acc=0.8427 val_acc=0.8648 val_loss=0.4155
+  Epoch 035/100: train_acc=0.8516 val_acc=0.8746 val_loss=0.4171
+  Epoch 040/100: train_acc=0.8546 val_acc=0.8666 val_loss=0.4217
+  Epoch 045/100: train_acc=0.8659 val_acc=0.8714 val_loss=0.4143
+  Epoch 050/100: train_acc=0.8830 val_acc=0.9014 val_loss=0.3301
+  Epoch 055/100: train_acc=0.8863 val_acc=0.9026 val_loss=0.3266
+  Epoch 060/100: train_acc=0.8873 val_acc=0.9058 val_loss=0.3241
+  Epoch 065/100: train_acc=0.9037 val_acc=0.9066 val_loss=0.3214
+  Epoch 070/100: train_acc=0.9055 val_acc=0.9066 val_loss=0.3274
+  Epoch 075/100: train_acc=0.9096 val_acc=0.9080 val_loss=0.3315
+  Epoch 080/100: train_acc=0.9104 val_acc=0.9114 val_loss=0.3286
+  Epoch 085/100: train_acc=0.9186 val_acc=0.9118 val_loss=0.3181
+  Epoch 090/100: train_acc=0.9204 val_acc=0.9112 val_loss=0.3279
+  Epoch 095/100: train_acc=0.9254 val_acc=0.9094 val_loss=0.3293
+  Early stopping at epoch 97
+Evaluating Explainer...
+Evaluating Jaccard on 1000 graphs...
+Evaluating AUROC on 1000 graphs...
+Seed 33 Results:
+Test Acc: 0.9030 | Node Jaccard: 0.1579 | Node AUROC: 0.4607
+Explainer Time: 2248.37s (2248.37 ms/graph)
+
+Final Results:
+   seed  test_acc  ...  explainer_total_s  explainer_mean_ms
+0    11     0.897  ...        2223.348801        2223.348801
+1    22     0.912  ...        2193.304914        2193.304914
+2    33     0.903  ...        2248.367065        2248.367065
+
+[3 rows x 7 columns]
+seed                   22.0000 ± 11.0000
+test_acc                 0.9040 ± 0.0075
+node_jaccard             0.1738 ± 0.0142
+node_auroc               0.4644 ± 0.0032
+train_time_s           225.0526 ± 4.9362
+explainer_total_s    2221.6736 ± 27.5693
+explainer_mean_ms    2221.6736 ± 27.5693
+dtype: object

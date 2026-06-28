@@ -1,0 +1,16 @@
+universe		= docker
+docker_image		= cruelmarco/pytorch_gnn:v1
+executable              = run_GSAT_Pattern.sh
+output                  = runlogs/run_GSAT_Pattern.$(ClusterId).$(ProcId).out
+error                   = runlogs/run_GSAT_Pattern.$(ClusterId).$(ProcId).err
+log                     = runlogs/run_GSAT_Pattern.$(ClusterId).log
+should_transfer_files   = YES
+stream_output = True
+transfer_input_files    = GSAT_Node_classification.py,run_GSAT_Pattern.sh,../../../
+request_GPUs = 1
+request_CPUs = 1
+request_memory = 4G
+requirements = UidDomain == "cs.uni-saarland.de" 
++WantGPUHomeMounted = true
++WantScratchMounted = true
+queue 1

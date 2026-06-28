@@ -1,0 +1,142 @@
+DEVICE = cuda
+Repo root added: /raid/condor/lib/condor/execute/dir_1505921
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Avg train edges: 66.31
+Node features: 3 (pos features added: True)
+  Epoch 001/100: tau=0.99 val_loss=1.8267
+  Epoch 005/100: tau=0.95 val_loss=0.8875
+  Epoch 010/100: tau=0.91 val_loss=0.6839
+  Epoch 015/100: tau=0.86 val_loss=0.5923
+  Epoch 020/100: tau=0.82 val_loss=0.6069
+  Epoch 025/100: tau=0.78 val_loss=0.6584
+  Epoch 030/100: tau=0.73 val_loss=0.4922
+  Epoch 035/100: tau=0.69 val_loss=0.4945
+  Epoch 040/100: tau=0.64 val_loss=0.4489
+  Epoch 045/100: tau=0.59 val_loss=0.4555
+  Epoch 050/100: tau=0.55 val_loss=0.4065
+  Epoch 055/100: tau=0.50 val_loss=0.3673
+  Epoch 060/100: tau=0.46 val_loss=0.4366
+  Epoch 065/100: tau=0.41 val_loss=0.3742
+  Epoch 070/100: tau=0.37 val_loss=0.3805
+  Epoch 075/100: tau=0.32 val_loss=0.4201
+  Epoch 080/100: tau=0.28 val_loss=0.3660
+  Epoch 085/100: tau=0.23 val_loss=0.3995
+  Epoch 090/100: tau=0.19 val_loss=0.4035
+  Epoch 095/100: tau=0.15 val_loss=0.3735
+  Epoch 100/100: tau=0.10 val_loss=0.3484
+GSAT (seed=11) | Test Acc 0.8990 | Test F1 0.8984 | Node AUROC 0.8165 | Node F1 0.6491 | Node Jaccard 0.4914 | Train 277.83s
+Saved GSAT explanation figure: GSAT_MNIST_Explanations.pdf
+Using device: cuda
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Avg train edges: 66.31
+Node features: 3 (pos features added: True)
+Starting BCos GIN training...
+Config -> epochs=100, batch_size=64, hidden=64, layers=4, use_scheduler=False, lr=0.005, early_stopping=True, patience=15
+[BCOS] Epoch 001, Train Loss: 2.0810, Val Loss: 2.0405, Val Acc: 0.2170, Val F1: 0.1441, LR: 0.005000
+[BCOS] Epoch 002, Train Loss: 2.0349, Val Loss: 2.0524, Val Acc: 0.2248, Val F1: 0.1241, LR: 0.005000
+[BCOS] Epoch 003, Train Loss: 2.0119, Val Loss: 2.0232, Val Acc: 0.2550, Val F1: 0.1748, LR: 0.005000
+[BCOS] Epoch 004, Train Loss: 1.9949, Val Loss: 1.9816, Val Acc: 0.2548, Val F1: 0.1698, LR: 0.005000
+[BCOS] Epoch 005, Train Loss: 1.9572, Val Loss: 1.8338, Val Acc: 0.3068, Val F1: 0.2554, LR: 0.005000
+[BCOS] Epoch 006, Train Loss: 1.7912, Val Loss: 1.7663, Val Acc: 0.3800, Val F1: 0.3391, LR: 0.005000
+[BCOS] Epoch 007, Train Loss: 1.6735, Val Loss: 1.9795, Val Acc: 0.3158, Val F1: 0.2815, LR: 0.005000
+[BCOS] Epoch 008, Train Loss: 1.7848, Val Loss: 1.5244, Val Acc: 0.4618, Val F1: 0.4198, LR: 0.005000
+[BCOS] Epoch 009, Train Loss: 1.4881, Val Loss: 1.4609, Val Acc: 0.4940, Val F1: 0.4948, LR: 0.005000
+[BCOS] Epoch 010, Train Loss: 1.3791, Val Loss: 1.3147, Val Acc: 0.5342, Val F1: 0.5258, LR: 0.005000
+[BCOS] Epoch 011, Train Loss: 1.2961, Val Loss: 1.3195, Val Acc: 0.5342, Val F1: 0.5159, LR: 0.005000
+[BCOS] Epoch 012, Train Loss: 1.2648, Val Loss: 1.2753, Val Acc: 0.5548, Val F1: 0.5536, LR: 0.005000
+[BCOS] Epoch 013, Train Loss: 1.1737, Val Loss: 1.1174, Val Acc: 0.6210, Val F1: 0.6167, LR: 0.005000
+[BCOS] Epoch 014, Train Loss: 1.1233, Val Loss: 1.1262, Val Acc: 0.6202, Val F1: 0.6120, LR: 0.005000
+[BCOS] Epoch 015, Train Loss: 1.0750, Val Loss: 1.0727, Val Acc: 0.6380, Val F1: 0.6350, LR: 0.005000
+[BCOS] Epoch 016, Train Loss: 1.0356, Val Loss: 1.0305, Val Acc: 0.6362, Val F1: 0.6269, LR: 0.005000
+[BCOS] Epoch 017, Train Loss: 1.0002, Val Loss: 0.9958, Val Acc: 0.6656, Val F1: 0.6629, LR: 0.005000
+[BCOS] Epoch 018, Train Loss: 0.9645, Val Loss: 0.9981, Val Acc: 0.6554, Val F1: 0.6530, LR: 0.005000
+[BCOS] Epoch 019, Train Loss: 0.9226, Val Loss: 0.9292, Val Acc: 0.6846, Val F1: 0.6823, LR: 0.005000
+[BCOS] Epoch 020, Train Loss: 0.8912, Val Loss: 0.9724, Val Acc: 0.6760, Val F1: 0.6686, LR: 0.005000
+[BCOS] Epoch 021, Train Loss: 0.8546, Val Loss: 0.8931, Val Acc: 0.6978, Val F1: 0.6924, LR: 0.005000
+[BCOS] Epoch 022, Train Loss: 0.8353, Val Loss: 0.9281, Val Acc: 0.7008, Val F1: 0.7045, LR: 0.005000
+[BCOS] Epoch 023, Train Loss: 0.8168, Val Loss: 0.8337, Val Acc: 0.7238, Val F1: 0.7245, LR: 0.005000
+[BCOS] Epoch 024, Train Loss: 0.8035, Val Loss: 0.8040, Val Acc: 0.7286, Val F1: 0.7238, LR: 0.005000
+[BCOS] Epoch 025, Train Loss: 0.7680, Val Loss: 0.7420, Val Acc: 0.7460, Val F1: 0.7417, LR: 0.005000
+[BCOS] Epoch 026, Train Loss: 0.7613, Val Loss: 0.7598, Val Acc: 0.7428, Val F1: 0.7416, LR: 0.005000
+[BCOS] Epoch 027, Train Loss: 0.7448, Val Loss: 0.8463, Val Acc: 0.7098, Val F1: 0.7060, LR: 0.005000
+[BCOS] Epoch 028, Train Loss: 0.7366, Val Loss: 0.8050, Val Acc: 0.7226, Val F1: 0.7251, LR: 0.005000
+[BCOS] Epoch 029, Train Loss: 0.7265, Val Loss: 0.7478, Val Acc: 0.7532, Val F1: 0.7512, LR: 0.005000
+[BCOS] Epoch 030, Train Loss: 0.6997, Val Loss: 0.7085, Val Acc: 0.7616, Val F1: 0.7623, LR: 0.005000
+[BCOS] Epoch 031, Train Loss: 0.6984, Val Loss: 0.7430, Val Acc: 0.7542, Val F1: 0.7568, LR: 0.005000
+[BCOS] Epoch 032, Train Loss: 0.6737, Val Loss: 0.7057, Val Acc: 0.7632, Val F1: 0.7648, LR: 0.005000
+[BCOS] Epoch 033, Train Loss: 0.6629, Val Loss: 0.7081, Val Acc: 0.7528, Val F1: 0.7497, LR: 0.005000
+[BCOS] Epoch 034, Train Loss: 0.6631, Val Loss: 0.6954, Val Acc: 0.7702, Val F1: 0.7692, LR: 0.005000
+[BCOS] Epoch 035, Train Loss: 0.6510, Val Loss: 0.6900, Val Acc: 0.7632, Val F1: 0.7648, LR: 0.005000
+[BCOS] Epoch 036, Train Loss: 0.6504, Val Loss: 0.6858, Val Acc: 0.7782, Val F1: 0.7742, LR: 0.005000
+[BCOS] Epoch 037, Train Loss: 0.6304, Val Loss: 0.6838, Val Acc: 0.7694, Val F1: 0.7699, LR: 0.005000
+[BCOS] Epoch 038, Train Loss: 0.6320, Val Loss: 0.6377, Val Acc: 0.7908, Val F1: 0.7893, LR: 0.005000
+[BCOS] Epoch 039, Train Loss: 0.6152, Val Loss: 0.7011, Val Acc: 0.7742, Val F1: 0.7717, LR: 0.005000
+[BCOS] Epoch 040, Train Loss: 0.6165, Val Loss: 0.6137, Val Acc: 0.7954, Val F1: 0.7960, LR: 0.005000
+[BCOS] Epoch 041, Train Loss: 0.5985, Val Loss: 0.6351, Val Acc: 0.7920, Val F1: 0.7897, LR: 0.005000
+[BCOS] Epoch 042, Train Loss: 0.5950, Val Loss: 0.6258, Val Acc: 0.7960, Val F1: 0.7978, LR: 0.005000
+[BCOS] Epoch 043, Train Loss: 0.6016, Val Loss: 0.6415, Val Acc: 0.7850, Val F1: 0.7818, LR: 0.005000
+[BCOS] Epoch 044, Train Loss: 0.5929, Val Loss: 0.6089, Val Acc: 0.7960, Val F1: 0.7939, LR: 0.005000
+[BCOS] Epoch 045, Train Loss: 0.5772, Val Loss: 0.5974, Val Acc: 0.8028, Val F1: 0.8015, LR: 0.005000
+[BCOS] Epoch 046, Train Loss: 0.5835, Val Loss: 0.7743, Val Acc: 0.7484, Val F1: 0.7415, LR: 0.005000
+[BCOS] Epoch 047, Train Loss: 0.5652, Val Loss: 0.6312, Val Acc: 0.7928, Val F1: 0.7905, LR: 0.005000
+[BCOS] Epoch 048, Train Loss: 0.5577, Val Loss: 0.6292, Val Acc: 0.7878, Val F1: 0.7875, LR: 0.005000
+[BCOS] Epoch 049, Train Loss: 0.5557, Val Loss: 0.5774, Val Acc: 0.8060, Val F1: 0.8067, LR: 0.005000
+[BCOS] Epoch 050, Train Loss: 0.5561, Val Loss: 0.6271, Val Acc: 0.7826, Val F1: 0.7800, LR: 0.005000
+[BCOS] Epoch 051, Train Loss: 0.5603, Val Loss: 0.5817, Val Acc: 0.8090, Val F1: 0.8088, LR: 0.005000
+[BCOS] Epoch 052, Train Loss: 0.5414, Val Loss: 0.5946, Val Acc: 0.8024, Val F1: 0.8031, LR: 0.005000
+[BCOS] Epoch 053, Train Loss: 0.5335, Val Loss: 0.5857, Val Acc: 0.8082, Val F1: 0.8096, LR: 0.005000
+[BCOS] Epoch 054, Train Loss: 0.5344, Val Loss: 0.5816, Val Acc: 0.8084, Val F1: 0.8083, LR: 0.005000
+[BCOS] Epoch 055, Train Loss: 0.5358, Val Loss: 0.5625, Val Acc: 0.8168, Val F1: 0.8178, LR: 0.005000
+[BCOS] Epoch 056, Train Loss: 0.5321, Val Loss: 0.6043, Val Acc: 0.7958, Val F1: 0.7951, LR: 0.005000
+[BCOS] Epoch 057, Train Loss: 0.5277, Val Loss: 0.5614, Val Acc: 0.8114, Val F1: 0.8115, LR: 0.005000
+[BCOS] Epoch 058, Train Loss: 0.5301, Val Loss: 0.5646, Val Acc: 0.8140, Val F1: 0.8157, LR: 0.005000
+[BCOS] Epoch 059, Train Loss: 0.5152, Val Loss: 0.5674, Val Acc: 0.8094, Val F1: 0.8083, LR: 0.005000
+[BCOS] Epoch 060, Train Loss: 0.5113, Val Loss: 0.6144, Val Acc: 0.8018, Val F1: 0.7983, LR: 0.005000
+[BCOS] Epoch 061, Train Loss: 0.5068, Val Loss: 0.6194, Val Acc: 0.7892, Val F1: 0.7920, LR: 0.005000
+[BCOS] Epoch 062, Train Loss: 0.5001, Val Loss: 0.6003, Val Acc: 0.8056, Val F1: 0.8058, LR: 0.005000
+[BCOS] Epoch 063, Train Loss: 0.4969, Val Loss: 0.5763, Val Acc: 0.8138, Val F1: 0.8143, LR: 0.005000
+[BCOS] Epoch 064, Train Loss: 0.5023, Val Loss: 0.6600, Val Acc: 0.7792, Val F1: 0.7795, LR: 0.005000
+[BCOS] Epoch 065, Train Loss: 0.4968, Val Loss: 0.6002, Val Acc: 0.8020, Val F1: 0.8000, LR: 0.005000
+[BCOS] Epoch 066, Train Loss: 0.4870, Val Loss: 0.6091, Val Acc: 0.7952, Val F1: 0.7950, LR: 0.005000
+[BCOS] Epoch 067, Train Loss: 0.4980, Val Loss: 0.5548, Val Acc: 0.8136, Val F1: 0.8128, LR: 0.005000
+[BCOS] Epoch 068, Train Loss: 0.4906, Val Loss: 0.5687, Val Acc: 0.8078, Val F1: 0.8080, LR: 0.005000
+[BCOS] Epoch 069, Train Loss: 0.4820, Val Loss: 0.5580, Val Acc: 0.8076, Val F1: 0.8085, LR: 0.005000
+[BCOS] Epoch 070, Train Loss: 0.4671, Val Loss: 0.5230, Val Acc: 0.8254, Val F1: 0.8246, LR: 0.005000
+[BCOS] Epoch 071, Train Loss: 0.4821, Val Loss: 0.5516, Val Acc: 0.8154, Val F1: 0.8151, LR: 0.005000
+[BCOS] Epoch 072, Train Loss: 0.4797, Val Loss: 0.5837, Val Acc: 0.8098, Val F1: 0.8075, LR: 0.005000
+[BCOS] Epoch 073, Train Loss: 0.4715, Val Loss: 0.5234, Val Acc: 0.8290, Val F1: 0.8288, LR: 0.005000
+[BCOS] Epoch 074, Train Loss: 0.4889, Val Loss: 0.6120, Val Acc: 0.8018, Val F1: 0.8015, LR: 0.005000
+[BCOS] Epoch 075, Train Loss: 0.4656, Val Loss: 0.5669, Val Acc: 0.8092, Val F1: 0.8090, LR: 0.005000
+[BCOS] Epoch 076, Train Loss: 0.4597, Val Loss: 0.5258, Val Acc: 0.8252, Val F1: 0.8250, LR: 0.005000
+[BCOS] Epoch 077, Train Loss: 0.4719, Val Loss: 0.5661, Val Acc: 0.8092, Val F1: 0.8098, LR: 0.005000
+[BCOS] Epoch 078, Train Loss: 0.4611, Val Loss: 0.5558, Val Acc: 0.8170, Val F1: 0.8176, LR: 0.005000
+[BCOS] Epoch 079, Train Loss: 0.4632, Val Loss: 0.5658, Val Acc: 0.8136, Val F1: 0.8111, LR: 0.005000
+[BCOS] Epoch 080, Train Loss: 0.4603, Val Loss: 0.6025, Val Acc: 0.8098, Val F1: 0.8079, LR: 0.005000
+[BCOS] Epoch 081, Train Loss: 0.4538, Val Loss: 0.5101, Val Acc: 0.8314, Val F1: 0.8322, LR: 0.005000
+[BCOS] Epoch 082, Train Loss: 0.4464, Val Loss: 0.5785, Val Acc: 0.8040, Val F1: 0.8056, LR: 0.005000
+[BCOS] Epoch 083, Train Loss: 0.4553, Val Loss: 0.5321, Val Acc: 0.8224, Val F1: 0.8220, LR: 0.005000
+[BCOS] Epoch 084, Train Loss: 0.4517, Val Loss: 0.5832, Val Acc: 0.8114, Val F1: 0.8097, LR: 0.005000
+[BCOS] Epoch 085, Train Loss: 0.4555, Val Loss: 0.5411, Val Acc: 0.8256, Val F1: 0.8236, LR: 0.005000
+[BCOS] Epoch 086, Train Loss: 0.4394, Val Loss: 0.5541, Val Acc: 0.8190, Val F1: 0.8189, LR: 0.005000
+[BCOS] Epoch 087, Train Loss: 0.4384, Val Loss: 0.5427, Val Acc: 0.8182, Val F1: 0.8164, LR: 0.005000
+[BCOS] Epoch 088, Train Loss: 0.4393, Val Loss: 0.5286, Val Acc: 0.8268, Val F1: 0.8271, LR: 0.005000
+[BCOS] Epoch 089, Train Loss: 0.4376, Val Loss: 0.5164, Val Acc: 0.8274, Val F1: 0.8270, LR: 0.005000
+[BCOS] Epoch 090, Train Loss: 0.4310, Val Loss: 0.5203, Val Acc: 0.8330, Val F1: 0.8334, LR: 0.005000
+[BCOS] Epoch 091, Train Loss: 0.4329, Val Loss: 0.5132, Val Acc: 0.8280, Val F1: 0.8266, LR: 0.005000
+[BCOS] Epoch 092, Train Loss: 0.4351, Val Loss: 0.5314, Val Acc: 0.8246, Val F1: 0.8219, LR: 0.005000
+[BCOS] Epoch 093, Train Loss: 0.4361, Val Loss: 0.5127, Val Acc: 0.8296, Val F1: 0.8295, LR: 0.005000
+[BCOS] Epoch 094, Train Loss: 0.4238, Val Loss: 0.5674, Val Acc: 0.8144, Val F1: 0.8137, LR: 0.005000
+[BCOS] Epoch 095, Train Loss: 0.4304, Val Loss: 0.5185, Val Acc: 0.8290, Val F1: 0.8291, LR: 0.005000
+[BCOS] Epoch 096, Train Loss: 0.4329, Val Loss: 0.5471, Val Acc: 0.8226, Val F1: 0.8219, LR: 0.005000
+[BCOS] Early stopping at epoch 96 (no val loss improvement for 15 epochs).
+[BCOS] Test Loss: 0.5599, Test Acc: 0.8150, Test F1: 0.8177
+[BCOS Explain] Graphs evaluated: 1000
+[BCOS Explain] Mean Jaccard: 0.8371
+[BCOS Explain] Mean AUROC: 0.9615
+BCos explanation metrics: {'jaccard': 0.8371479918626847, 'auroc': 0.961484, 'num_graphs': 1000}
+Publication-ready figure saved successfully as: BCos_MNIST75sp_Explanations.pdf
+Saved comparison figure: GSAT_BCos_MNIST_Comparison.pdf

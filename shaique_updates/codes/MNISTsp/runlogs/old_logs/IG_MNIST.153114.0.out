@@ -1,0 +1,30 @@
+Using MNISTSP_SPLIT_ROOT=/home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+DEVICE = cuda
+Repo root not found; using local/script paths.
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 10000
+Node features: 3 (pos features added: True)
+
+=== Seed 11 ===
+  Epoch 001/100: train_acc=0.2742 val_acc=0.4674 val_loss=1.6103
+  Epoch 005/100: train_acc=0.6844 val_acc=0.7334 val_loss=0.8240
+  Epoch 010/100: train_acc=0.7685 val_acc=0.8142 val_loss=0.5876
+  Epoch 015/100: train_acc=0.7954 val_acc=0.8362 val_loss=0.5334
+  Epoch 020/100: train_acc=0.8131 val_acc=0.8456 val_loss=0.5046
+  Epoch 025/100: train_acc=0.8239 val_acc=0.8672 val_loss=0.4288
+  Epoch 030/100: train_acc=0.8414 val_acc=0.8822 val_loss=0.3826
+  Epoch 035/100: train_acc=0.8445 val_acc=0.8766 val_loss=0.4034
+  Epoch 040/100: train_acc=0.8482 val_acc=0.8770 val_loss=0.3837
+  Epoch 045/100: train_acc=0.8530 val_acc=0.8926 val_loss=0.3608
+  Epoch 050/100: train_acc=0.8573 val_acc=0.8794 val_loss=0.3847
+  Epoch 055/100: train_acc=0.8655 val_acc=0.8982 val_loss=0.3337
+  Epoch 060/100: train_acc=0.8693 val_acc=0.8908 val_loss=0.3521
+  Epoch 065/100: train_acc=0.8747 val_acc=0.8924 val_loss=0.3477
+  Epoch 070/100: train_acc=0.8743 val_acc=0.8864 val_loss=0.3692
+  Epoch 075/100: train_acc=0.8952 val_acc=0.9140 val_loss=0.3056
+  Epoch 080/100: train_acc=0.9000 val_acc=0.9168 val_loss=0.3087
+  Epoch 085/100: train_acc=0.9012 val_acc=0.9048 val_loss=0.3382
+  Epoch 090/100: train_acc=0.9124 val_acc=0.9164 val_loss=0.3013
+  Epoch 095/100: train_acc=0.9181 val_acc=0.9128 val_loss=0.3222
+  Epoch 100/100: train_acc=0.9160 val_acc=0.9168 val_loss=0.3279

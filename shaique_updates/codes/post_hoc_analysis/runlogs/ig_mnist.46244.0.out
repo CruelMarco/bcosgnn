@@ -1,0 +1,8 @@
+DEVICE = cuda
+Repo root added: /raid/condor/lib/condor/execute/dir_1271739
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Node features: 4 (pos features added: True)
+
+=== Seed 11 ===

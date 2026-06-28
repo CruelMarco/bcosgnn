@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/raid/condor/lib/condor/execute/dir_2522568/gsat_mnist_hpc.py", line 405, in <module>
+    run(parse_args())
+  File "/raid/condor/lib/condor/execute/dir_2522568/gsat_mnist_hpc.py", line 305, in run
+    repo_root = find_repo_root(Path.cwd())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/condor/lib/condor/execute/dir_2522568/gsat_mnist_hpc.py", line 27, in find_repo_root
+    raise RuntimeError("Could not locate repo root (pyproject.toml + bcosgnn/).")
+RuntimeError: Could not locate repo root (pyproject.toml + bcosgnn/).

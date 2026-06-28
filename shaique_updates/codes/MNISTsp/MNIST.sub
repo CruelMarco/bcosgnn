@@ -1,0 +1,17 @@
+universe		= docker
+docker_image		= cruelmarco/pytorch_gnn:v1
+executable              = run_MNIST.sh
+output                  = runlogs/MNIST_B_Sweep.$(ClusterId).$(ProcId).out
+error                   = runlogs/MNIST_B_Sweep.$(ClusterId).$(ProcId).err
+log                     = runlogs/MNIST_B_Sweep.$(ClusterId).log
+should_transfer_files   = YES
+stream_output = True
+transfer_input_files    = bcos_MNIST.py,run_MNIST.sh,../../../bcosgnn
+environment             = "MNISTSP_SPLIT_ROOT=/home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits"
+request_GPUs = 1
+request_CPUs = 1
+request_memory = 4G
+requirements = UidDomain == "cs.uni-saarland.de" 
++WantGPUHomeMounted = true
++WantScratchMounted = true
+queue 1

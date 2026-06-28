@@ -1,0 +1,32 @@
+Using MNISTSP_SPLIT_ROOT=/home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Repo root not found; using local/script data paths for saved splits.
+Device: cuda
+Split dir: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Test graphs: 10000
+
+=== Seed 11 ===
+Process total: 0.518s (0.052 ms/graph) | Explain total: 20.199s (2.020 ms/graph)
+
+=== Seed 22 ===
+Process total: 0.906s (0.091 ms/graph) | Explain total: 18.495s (1.849 ms/graph)
+
+=== Seed 33 ===
+Process total: 0.871s (0.087 ms/graph) | Explain total: 18.515s (1.851 ms/graph)
+
+=== Seed 44 ===
+Process total: 0.897s (0.090 ms/graph) | Explain total: 19.069s (1.907 ms/graph)
+
+=== Seed 55 ===
+Process total: 0.945s (0.095 ms/graph) | Explain total: 19.687s (1.969 ms/graph)
+
+==============================================================================
+FULL TEST-SET TIMING SUMMARY ACROSS SEEDS
+==============================================================================
+process_total_s       : 0.8275 ± 0.1566
+explain_total_s       : 19.1929 ± 0.6662
+process_ms_per_graph  : 0.0828 ± 0.0157
+explain_ms_per_graph  : 1.9193 ± 0.0666
+------------------------------------------------------------------------------
+Total process time over all seeds : 4.1376 s
+Total explain time over all seeds : 95.9647 s
+Total graphs across all seeds    : 50000

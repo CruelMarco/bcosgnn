@@ -1,0 +1,82 @@
+Using MNISTSP_SPLIT_ROOT=/home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Repo root not found in this execution context; using installed packages and local paths.
+Using data root: /raid/condor/lib/condor/execute/dir_1718181/data/MNISTsp
+Using MNISTSP_SPLIT_ROOT: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Avg train edges (first 1000 graphs): 66.31
+Node features: 3 (pos features added: True)
+Dataset info: {'num_node_features': 3, 'num_classes': 10, 'num_edge_features': 0}
+
+=== Seed 0 ===
+Using device: cuda
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Avg train edges (first 1000 graphs): 66.31
+Node features: 3 (pos features added: True)
+Starting BCos GIN training...
+Config -> epochs=100, batch_size=64, hidden=64, layers=4, use_scheduler=False, lr=0.005, early_stopping=True, patience=15
+[BCOS] Epoch 001, Train Loss: 110345.8556, Val Loss: 36596.5991, Val Acc: 0.1428, Val F1: 0.0905, LR: 0.005000
+[BCOS] Epoch 010, Train Loss: 590.6665, Val Loss: 600.8957, Val Acc: 0.2336, Val F1: 0.1578, LR: 0.005000
+[BCOS] Epoch 020, Train Loss: 170.7571, Val Loss: 153.3154, Val Acc: 0.2338, Val F1: 0.1785, LR: 0.005000
+[BCOS] Epoch 030, Train Loss: 250.2997, Val Loss: 241.9770, Val Acc: 0.1976, Val F1: 0.1296, LR: 0.005000
+[BCOS] Early stopping at epoch 36 (no val loss improvement for 15 epochs).
+[BCOS] Test Loss: 107.6911, Test Acc: 0.1930, Test F1: 0.1727
+{'seed': 0, 'train_time_sec': 229.98931185994297, 'explain_time_sec': 5.544189101085067, 'end_to_end_time_sec': 235.53350096102804, 'mean_ms_per_graph': 4.249692897312343, 'median_ms_per_graph': 4.175111651420593, 'p90_ms_per_graph': 4.4134181924164295, 'throughput_graphs_per_s': 180.3690281423279, 'test_acc': 0.193, 'test_f1': 0.17269203725846533, 'jaccard': 0.6774983536052522, 'auroc': 0.9152872000000001, 'num_graphs': 1000}
+
+=== Seed 1 ===
+Using device: cuda
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Avg train edges (first 1000 graphs): 66.31
+Node features: 3 (pos features added: True)
+Starting BCos GIN training...
+Config -> epochs=100, batch_size=64, hidden=64, layers=4, use_scheduler=False, lr=0.005, early_stopping=True, patience=15
+[BCOS] Epoch 001, Train Loss: 96632.2683, Val Loss: 12135.0126, Val Acc: 0.1768, Val F1: 0.1251, LR: 0.005000
+[BCOS] Epoch 010, Train Loss: 893.4378, Val Loss: 704.4855, Val Acc: 0.1992, Val F1: 0.1179, LR: 0.005000
+[BCOS] Epoch 020, Train Loss: 120.8493, Val Loss: 147.3871, Val Acc: 0.2392, Val F1: 0.1856, LR: 0.005000
+[BCOS] Epoch 030, Train Loss: 1221.6868, Val Loss: 261.8914, Val Acc: 0.1840, Val F1: 0.1356, LR: 0.005000
+[BCOS] Epoch 040, Train Loss: 29.3340, Val Loss: 14.5209, Val Acc: 0.2234, Val F1: 0.1889, LR: 0.005000
+[BCOS] Epoch 050, Train Loss: 5708.5681, Val Loss: 1529.1694, Val Acc: 0.1912, Val F1: 0.1409, LR: 0.005000
+[BCOS] Epoch 060, Train Loss: 54.5859, Val Loss: 37.3871, Val Acc: 0.1904, Val F1: 0.1145, LR: 0.005000
+[BCOS] Early stopping at epoch 63 (no val loss improvement for 15 epochs).
+[BCOS] Test Loss: 13.2060, Test Acc: 0.1820, Test F1: 0.1666
+{'seed': 1, 'train_time_sec': 383.6980885518715, 'explain_time_sec': 5.5490381717681885, 'end_to_end_time_sec': 389.24712672363967, 'mean_ms_per_graph': 4.259946342557669, 'median_ms_per_graph': 4.210818558931351, 'p90_ms_per_graph': 4.445838090032339, 'throughput_graphs_per_s': 180.21141124739322, 'test_acc': 0.18, 'test_f1': 0.16264774488231828, 'jaccard': 0.5972711380518808, 'auroc': 0.8908848, 'num_graphs': 1000}
+
+=== Seed 2 ===
+Using device: cuda
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Avg train edges (first 1000 graphs): 66.31
+Node features: 3 (pos features added: True)
+Starting BCos GIN training...
+Config -> epochs=100, batch_size=64, hidden=64, layers=4, use_scheduler=False, lr=0.005, early_stopping=True, patience=15
+[BCOS] Epoch 001, Train Loss: 91794.7545, Val Loss: 8707.0028, Val Acc: 0.2036, Val F1: 0.1315, LR: 0.005000
+[BCOS] Epoch 010, Train Loss: 604.1565, Val Loss: 549.0651, Val Acc: 0.2154, Val F1: 0.1292, LR: 0.005000
+[BCOS] Epoch 020, Train Loss: 187.6390, Val Loss: 155.8150, Val Acc: 0.2196, Val F1: 0.1730, LR: 0.005000
+[BCOS] Epoch 030, Train Loss: 670.2662, Val Loss: 2088.5981, Val Acc: 0.1728, Val F1: 0.1246, LR: 0.005000
+[BCOS] Epoch 040, Train Loss: 48.6719, Val Loss: 25.2625, Val Acc: 0.1934, Val F1: 0.1291, LR: 0.005000
+[BCOS] Epoch 050, Train Loss: 21.2656, Val Loss: 10.0035, Val Acc: 0.1938, Val F1: 0.1618, LR: 0.005000
+[BCOS] Epoch 060, Train Loss: 2.9410, Val Loss: 2.3671, Val Acc: 0.2036, Val F1: 0.1561, LR: 0.005000
+[BCOS] Epoch 070, Train Loss: 22.4462, Val Loss: 274.1374, Val Acc: 0.0928, Val F1: 0.0314, LR: 0.005000
+[BCOS] Epoch 080, Train Loss: 50.8722, Val Loss: 18.2572, Val Acc: 0.2026, Val F1: 0.1565, LR: 0.005000
+[BCOS] Epoch 090, Train Loss: 2.5468, Val Loss: 2.3606, Val Acc: 0.2242, Val F1: 0.1728, LR: 0.005000
+[BCOS] Early stopping at epoch 91 (no val loss improvement for 15 epochs).
+[BCOS] Test Loss: 2.1064, Test Acc: 0.2160, Test F1: 0.1611
+{'seed': 2, 'train_time_sec': 545.9404011676088, 'explain_time_sec': 5.598874803632498, 'end_to_end_time_sec': 551.5392759712413, 'mean_ms_per_graph': 4.293667810969055, 'median_ms_per_graph': 4.319214727729559, 'p90_ms_per_graph': 4.508385248482227, 'throughput_graphs_per_s': 178.60731576837713, 'test_acc': 0.223, 'test_f1': 0.1680411551290911, 'jaccard': 0.4699190873693658, 'auroc': 0.7985935999999999, 'num_graphs': 1000}
+
+=== Summary (mean ± std) ===
+Test Accuracy : 0.1987 ± 0.0221
+Explanation AUROC : 0.8683 ± 0.0616
+Explanation Jaccard: 0.5816 ± 0.1047
+Train time (s): 386.5426 ± 157.9948
+Explain total time (s): 5.5640 ± 0.0303
+End-to-end time (s): 392.1066 ± 158.0223
+Mean ms/graph: 4.2678 ± 0.0230
+Median ms/graph: 4.2350 ± 0.0750
+P90 ms/graph: 4.4559 ± 0.0483
+Throughput (graphs/s): 179.7293 ± 0.9748

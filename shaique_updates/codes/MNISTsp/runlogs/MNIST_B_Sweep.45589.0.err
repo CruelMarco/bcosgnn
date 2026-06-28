@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/raid/condor/lib/condor/execute/dir_1708600/bcos_MNIST.py", line 487, in <module>
+    seed_results = run_bcos_multi_seed(seeds=(0, 1, 2))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/raid/condor/lib/condor/execute/dir_1708600/bcos_MNIST.py", line 406, in run_bcos_multi_seed
+    model, train_loader, val_loader, test_loader = train_bcos_gin(
+                                                   ^^^^^^^^^^^^^^^
+  File "/raid/condor/lib/condor/execute/dir_1708600/bcos_MNIST.py", line 259, in train_bcos_gin
+    train_loss = train_epoch(model, train_loader, optimizer, criterion, device)
+                 ^^^^^^^^^^^
+NameError: name 'train_epoch' is not defined. Did you mean: 'train_loss'?

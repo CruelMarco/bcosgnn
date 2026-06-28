@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/raid/condor/lib/condor/execute/dir_2530546/gsat_mnist_hpc.py", line 426, in <module>
+    run(parse_args())
+  File "/raid/condor/lib/condor/execute/dir_2530546/gsat_mnist_hpc.py", line 327, in run
+    train_loader, val_loader, test_loader, test_dataset, info = load_saved_splits(
+                                                                ^^^^^^^^^^^^^^^^^^
+  File "/raid/condor/lib/condor/execute/dir_2530546/gsat_mnist_hpc.py", line 70, in load_saved_splits
+    raise FileNotFoundError("Could not find saved sparsified split files.")
+FileNotFoundError: Could not find saved sparsified split files.

@@ -1,0 +1,97 @@
+DEVICE = cuda
+Repo root added: /raid/condor/lib/condor/execute/dir_1273968
+Loading preprocessed sparsified .pt splits...
+Using split directory: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/MNISTsp/data/MNIST/sparsified_pt_splits
+Loaded splits. Train: 20000, Val: 5000, Test: 1000
+Node features: 4 (pos features added: True)
+
+=== Seed 11 ===
+  Epoch 001/100: train_acc=0.2932 val_acc=0.3990 val_loss=1.7019
+  Epoch 005/100: train_acc=0.6525 val_acc=0.6952 val_loss=0.9298
+  Epoch 010/100: train_acc=0.7543 val_acc=0.8118 val_loss=0.5828
+  Epoch 015/100: train_acc=0.7743 val_acc=0.8062 val_loss=0.5860
+  Epoch 020/100: train_acc=0.7961 val_acc=0.8136 val_loss=0.5912
+  Epoch 025/100: train_acc=0.8125 val_acc=0.8602 val_loss=0.4518
+  Epoch 030/100: train_acc=0.8186 val_acc=0.8718 val_loss=0.4172
+  Epoch 035/100: train_acc=0.8195 val_acc=0.8464 val_loss=0.5051
+  Epoch 040/100: train_acc=0.8262 val_acc=0.8830 val_loss=0.3817
+  Epoch 045/100: train_acc=0.8316 val_acc=0.8772 val_loss=0.4107
+  Epoch 050/100: train_acc=0.8368 val_acc=0.8492 val_loss=0.5095
+  Epoch 055/100: train_acc=0.8643 val_acc=0.8940 val_loss=0.3609
+  Epoch 060/100: train_acc=0.8669 val_acc=0.8902 val_loss=0.3726
+  Epoch 065/100: train_acc=0.8665 val_acc=0.8868 val_loss=0.3834
+  Epoch 070/100: train_acc=0.8781 val_acc=0.9022 val_loss=0.3423
+  Epoch 075/100: train_acc=0.8849 val_acc=0.9010 val_loss=0.3553
+  Epoch 080/100: train_acc=0.8864 val_acc=0.8982 val_loss=0.3415
+  Epoch 085/100: train_acc=0.8925 val_acc=0.9038 val_loss=0.3503
+  Epoch 090/100: train_acc=0.8931 val_acc=0.8954 val_loss=0.3695
+  Early stopping at epoch 93
+Seed 11 | Test Acc 0.8980 | Test F1 0.8981 | Node AUROC 0.7050 | Node F1 0.5190 | Node Jaccard 0.3697 | Train 216.29s | TestProc 0.11s | IG 304.87s (304.87 ms/graph)
+
+=== Seed 22 ===
+  Epoch 001/100: train_acc=0.2997 val_acc=0.3656 val_loss=1.7190
+  Epoch 005/100: train_acc=0.6498 val_acc=0.6728 val_loss=0.9680
+  Epoch 010/100: train_acc=0.7499 val_acc=0.7834 val_loss=0.6759
+  Epoch 015/100: train_acc=0.7863 val_acc=0.8098 val_loss=0.5916
+  Epoch 020/100: train_acc=0.8037 val_acc=0.8372 val_loss=0.4998
+  Epoch 025/100: train_acc=0.8156 val_acc=0.8642 val_loss=0.4310
+  Epoch 030/100: train_acc=0.8226 val_acc=0.8668 val_loss=0.4265
+  Epoch 035/100: train_acc=0.8367 val_acc=0.8800 val_loss=0.3864
+  Epoch 040/100: train_acc=0.8380 val_acc=0.8576 val_loss=0.4706
+  Epoch 045/100: train_acc=0.8446 val_acc=0.8864 val_loss=0.3756
+  Epoch 050/100: train_acc=0.8478 val_acc=0.8792 val_loss=0.4124
+  Epoch 055/100: train_acc=0.8558 val_acc=0.8414 val_loss=0.5373
+  Epoch 060/100: train_acc=0.8539 val_acc=0.8890 val_loss=0.3936
+  Epoch 065/100: train_acc=0.8600 val_acc=0.8872 val_loss=0.3701
+  Epoch 070/100: train_acc=0.8619 val_acc=0.8968 val_loss=0.3673
+  Epoch 075/100: train_acc=0.8841 val_acc=0.9024 val_loss=0.3373
+  Epoch 080/100: train_acc=0.8852 val_acc=0.9002 val_loss=0.3611
+  Epoch 085/100: train_acc=0.8891 val_acc=0.9032 val_loss=0.3596
+  Epoch 090/100: train_acc=0.9019 val_acc=0.9078 val_loss=0.3539
+  Epoch 095/100: train_acc=0.9029 val_acc=0.8990 val_loss=0.3713
+  Epoch 100/100: train_acc=0.9070 val_acc=0.9066 val_loss=0.3683
+  Early stopping at epoch 100
+Seed 22 | Test Acc 0.8990 | Test F1 0.8987 | Node AUROC 0.6927 | Node F1 0.5116 | Node Jaccard 0.3593 | Train 227.51s | TestProc 0.09s | IG 319.76s (319.76 ms/graph)
+
+=== Seed 33 ===
+  Epoch 001/100: train_acc=0.2912 val_acc=0.4492 val_loss=1.6426
+  Epoch 005/100: train_acc=0.6946 val_acc=0.7404 val_loss=0.7940
+  Epoch 010/100: train_acc=0.7822 val_acc=0.7868 val_loss=0.6429
+  Epoch 015/100: train_acc=0.8067 val_acc=0.8414 val_loss=0.4982
+  Epoch 020/100: train_acc=0.8259 val_acc=0.8602 val_loss=0.4389
+  Epoch 025/100: train_acc=0.8374 val_acc=0.8600 val_loss=0.4335
+  Epoch 030/100: train_acc=0.8475 val_acc=0.8688 val_loss=0.4026
+  Epoch 035/100: train_acc=0.8527 val_acc=0.8578 val_loss=0.4728
+  Epoch 040/100: train_acc=0.8578 val_acc=0.8762 val_loss=0.4029
+  Epoch 045/100: train_acc=0.8690 val_acc=0.8984 val_loss=0.3460
+  Epoch 050/100: train_acc=0.8721 val_acc=0.8884 val_loss=0.3680
+  Epoch 055/100: train_acc=0.8780 val_acc=0.8730 val_loss=0.4042
+  Epoch 060/100: train_acc=0.8768 val_acc=0.8770 val_loss=0.4017
+  Epoch 065/100: train_acc=0.9004 val_acc=0.9056 val_loss=0.3131
+  Epoch 070/100: train_acc=0.9046 val_acc=0.9082 val_loss=0.3096
+  Epoch 075/100: train_acc=0.9041 val_acc=0.9092 val_loss=0.3169
+  Epoch 080/100: train_acc=0.9161 val_acc=0.9148 val_loss=0.3091
+  Epoch 085/100: train_acc=0.9212 val_acc=0.9134 val_loss=0.3159
+  Epoch 090/100: train_acc=0.9204 val_acc=0.9114 val_loss=0.3153
+  Early stopping at epoch 93
+Seed 33 | Test Acc 0.9190 | Test F1 0.9188 | Node AUROC 0.8075 | Node F1 0.6370 | Node Jaccard 0.4785 | Train 204.97s | TestProc 0.09s | IG 332.64s (332.64 ms/graph)
+
+====================================================================================
+MULTI-SEED SUMMARY (mean ± std)
+====================================================================================
+test_acc              : 0.9053 ± 0.0097
+test_f1               : 0.9052 ± 0.0096
+node_auroc            : 0.7351 ± 0.0515
+node_f1               : 0.5559 ± 0.0574
+node_jaccard          : 0.4025 ± 0.0539
+train_time_s          : 216.2565 ± 9.1993
+test_process_total_s  : 0.0983 ± 0.0069
+ig_explain_total_s    : 319.0917 ± 11.3499
+ig_mean_ms            : 319.0917 ± 11.3499
+ig_median_ms          : 350.0033 ± 5.4796
+ig_p90_ms             : 382.7861 ± 2.4178
+ig_graphs_per_s       : 3.1379 ± 0.1121
+------------------------------------------------------------------------------------
+Total IG explanation time over all seeds : 957.2750 s
+Total test processing time over all seeds: 0.2950 s
+Total training time over all seeds       : 648.7696 s
