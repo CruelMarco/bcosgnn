@@ -1,0 +1,16 @@
+universe		= docker
+docker_image		= cruelmarco/pytorch_gnn:v1
+executable              = run_mode_di_halo.sh
+output                  = runlogs/mode_di_halo.$(ClusterId).$(ProcId).out
+error                   = runlogs/mode_di_halo.$(ClusterId).$(ProcId).err
+log                     = runlogs/mode_di_halo.$(ClusterId).log
+should_transfer_files   = YES
+transfer_input_files    = di_halo_benzene_mode.py, run_mode_di_halo.sh
+stream_output = True
+request_GPUs = 1
+request_CPUs = 1
+request_memory = 8G
+requirements = UidDomain == "cs.uni-saarland.de" 
++WantGPUHomeMounted = true
++WantScratchMounted = true
+queue 1

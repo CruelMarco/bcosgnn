@@ -1,0 +1,115 @@
+Repo root added: /home/moso00002/bcosgnn/bcosgnn
+Loading data from: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/multi_class_Zinc/zinc_di_halo_benzene_data/processed/data.pt
+
+Dataset: 9000 graphs
+Node features : 10
+Edge features : 4
+Classes       : 9
+
+Avg nodes/graph : 51.7
+Avg edges/graph : 108.8
+Class distribution:
+  Class 0 (di_chloro_ortho): 1000 graphs
+  Class 1 (di_chloro_meta): 1000 graphs
+  Class 2 (di_chloro_para): 1000 graphs
+  Class 3 (di_fluoro_ortho): 1000 graphs
+  Class 4 (di_fluoro_meta): 1000 graphs
+  Class 5 (di_fluoro_para): 1000 graphs
+  Class 6 (di_bromo_ortho): 1000 graphs
+  Class 7 (di_bromo_meta): 1000 graphs
+  Class 8 (di_bromo_para): 1000 graphs
+Device: cuda
+================================================================================
+Seed 0
+================================================================================
+  Split: train=7199  val=901  test=900
+Epoch 001 | train_loss=2.1963 train_acc=0.1160 | val_loss=2.1544 val_acc=0.1942 | lr=1.00e-03
+Epoch 010 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=1.00e-03
+Epoch 020 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=1.00e-03
+Epoch 030 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=1.00e-03
+  Early stopping at epoch 37 (best epoch 12, best val_loss 0.0000)
+Seed 0 | best_epoch=12 | test_acc=1.0000 | test_expl_auroc=0.9402 | test_jaccard=0.8437
+================================================================================
+Seed 1
+================================================================================
+  Split: train=7199  val=901  test=900
+Epoch 001 | train_loss=2.1272 train_acc=0.1436 | val_loss=1.6493 val_acc=0.3374 | lr=1.00e-03
+Epoch 010 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=1.00e-03
+Epoch 020 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=1.00e-03
+Epoch 030 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=1.00e-03
+  Early stopping at epoch 32 (best epoch 7, best val_loss 0.0001)
+Seed 1 | best_epoch=7 | test_acc=1.0000 | test_expl_auroc=0.9992 | test_jaccard=0.9720
+================================================================================
+Seed 2
+================================================================================
+  Split: train=7199  val=901  test=900
+Epoch 001 | train_loss=2.2013 train_acc=0.1074 | val_loss=2.1940 val_acc=0.1110 | lr=1.00e-03
+Epoch 010 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=1.00e-03
+Epoch 020 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=1.00e-03
+Epoch 030 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=1.00e-03
+  Early stopping at epoch 39 (best epoch 14, best val_loss 0.0001)
+Seed 2 | best_epoch=14 | test_acc=1.0000 | test_expl_auroc=0.9958 | test_jaccard=0.9668
+
+Per-seed test metrics:
+shape: (3, 7)
+┌──────┬────────────┬───────────────┬───────────┬──────────┬─────────────────┬──────────────┐
+│ seed ┆ best_epoch ┆ best_val_loss ┆ test_loss ┆ test_acc ┆ test_expl_auroc ┆ test_jaccard │
+│ ---  ┆ ---        ┆ ---           ┆ ---       ┆ ---      ┆ ---             ┆ ---          │
+│ i64  ┆ i64        ┆ f64           ┆ f64       ┆ f64      ┆ f64             ┆ f64          │
+╞══════╪════════════╪═══════════════╪═══════════╪══════════╪═════════════════╪══════════════╡
+│ 0    ┆ 12         ┆ 0.000045      ┆ 0.000033  ┆ 1.0      ┆ 0.940244        ┆ 0.843737     │
+│ 1    ┆ 7          ┆ 0.000105      ┆ 0.000113  ┆ 1.0      ┆ 0.999209        ┆ 0.97196      │
+│ 2    ┆ 14         ┆ 0.000061      ┆ 0.000045  ┆ 1.0      ┆ 0.995842        ┆ 0.966778     │
+└──────┴────────────┴───────────────┴───────────┴──────────┴─────────────────┴──────────────┘
+
+Mean ± std across seeds:
+shape: (1, 8)
+┌────────────┬────────────┬────────────┬───────────┬───────────┬───────────┬───────────┬───────────┐
+│ test_loss_ ┆ test_loss_ ┆ test_acc_m ┆ test_acc_ ┆ test_expl ┆ test_expl ┆ test_jacc ┆ test_jacc │
+│ mean       ┆ std        ┆ ean        ┆ std       ┆ _auroc_me ┆ _auroc_st ┆ ard_mean  ┆ ard_std   │
+│ ---        ┆ ---        ┆ ---        ┆ ---       ┆ an        ┆ d         ┆ ---       ┆ ---       │
+│ f64        ┆ f64        ┆ f64        ┆ f64       ┆ ---       ┆ ---       ┆ f64       ┆ f64       │
+│            ┆            ┆            ┆           ┆ f64       ┆ f64       ┆           ┆           │
+╞════════════╪════════════╪════════════╪═══════════╪═══════════╪═══════════╪═══════════╪═══════════╡
+│ 0.000063   ┆ 0.000043   ┆ 1.0        ┆ 0.0       ┆ 0.978432  ┆ 0.033114  ┆ 0.927491  ┆ 0.07258   │
+└────────────┴────────────┴────────────┴───────────┴───────────┴───────────┴───────────┴───────────┘
+
+Best seed: 1
+Post-hoc GINE explainer utilities ready.
+  Captum available: True
+
+============================================================
+Seed 0: post-hoc explainers on B-COS GINE
+============================================================
+  GNNExplainer  →  Jaccard: 0.7166  |  AUROC: 0.9268
+  IG (Captum)   →  Jaccard: 0.8379  |  AUROC: 0.9733
+
+============================================================
+Seed 1: post-hoc explainers on B-COS GINE
+============================================================
+  GNNExplainer  →  Jaccard: 0.5539  |  AUROC: 0.8992
+  IG (Captum)   →  Jaccard: 0.8944  |  AUROC: 0.9831
+
+============================================================
+Seed 2: post-hoc explainers on B-COS GINE
+============================================================
+  GNNExplainer  →  Jaccard: 0.8134  |  AUROC: 0.9701
+  IG (Captum)   →  Jaccard: 0.9501  |  AUROC: 0.9955
+
+Post-hoc evaluation complete.
+===========================================================================
+Explanation Quality Comparison — Di-Halo Benzene (B-COS GINE Model)
+Across 3 seeds, mean ± std
+===========================================================================
+shape: (3, 5)
+┌─────────────────┬────────────┬───────────────────────────────┬─────────────────┬─────────────────┐
+│ Method          ┆ Model      ┆ Explainer                     ┆ Jaccard@|GT|    ┆ Node AUROC      │
+│ ---             ┆ ---        ┆ ---                           ┆ ---             ┆ ---             │
+│ str             ┆ str        ┆ str                           ┆ str             ┆ str             │
+╞═════════════════╪════════════╪═══════════════════════════════╪═════════════════╪═════════════════╡
+│ B-COS Intrinsic ┆ B-COS GINE ┆ Linear decomposition          ┆ 0.9275 ± 0.0726 ┆ 0.9784 ± 0.0331 │
+│                 ┆            ┆ (explain_…                    ┆                 ┆                 │
+│ GNNExplainer    ┆ B-COS GINE ┆ PyG GNNExplainer (200 epochs) ┆ 0.6946 ± 0.1311 ┆ 0.9321 ± 0.0357 │
+│ (post-hoc)      ┆            ┆                               ┆                 ┆                 │
+│ IG (post-hoc)   ┆ B-COS GINE ┆ Captum IntegratedGradients    ┆ 0.8942 ± 0.0561 ┆ 0.9840 ± 0.0111 │
+└─────────────────┴────────────┴───────────────────────────────┴─────────────────┴─────────────────┘
