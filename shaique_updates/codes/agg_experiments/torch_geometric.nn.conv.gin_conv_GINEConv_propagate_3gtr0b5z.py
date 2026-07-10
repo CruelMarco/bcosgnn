@@ -9,7 +9,7 @@ from torch_geometric import is_compiling
 from torch_geometric.utils import is_sparse
 from torch_geometric.typing import Size, SparseTensor
 
-from bcosgnn.sanitized_models.bcos_gine_conv import *
+from torch_geometric.nn.conv.gin_conv import *
 
 
 from typing import List, NamedTuple, Optional, Union
@@ -24,18 +24,18 @@ from torch_geometric.typing import SparseTensor
 
 
 class CollectArgs(NamedTuple):
-    x_j: torch.Tensor
-    edge_attr: torch.Tensor
-    index: torch.Tensor
-    ptr: typing.Optional[torch.Tensor]
-    dim_size: typing.Optional[int]
+    x_j: Tensor
+    edge_attr: Tensor
+    index: Tensor
+    ptr: Optional[Tensor]
+    dim_size: Optional[int]
 
 
 def collect(
     self,
     edge_index: Union[Tensor, SparseTensor],
-    x: torch.Tensor,
-    edge_attr: torch.Tensor,
+    x: OptPairTensor,
+    edge_attr: OptTensor,
     size: List[Optional[int]],
 ) -> CollectArgs:
 
@@ -119,10 +119,10 @@ def collect(
 def propagate(
     self,
     edge_index: Union[Tensor, SparseTensor],
-    x: torch.Tensor,
-    edge_attr: torch.Tensor,
+    x: OptPairTensor,
+    edge_attr: OptTensor,
     size: Size = None,
-) -> torch.Tensor:
+) -> Tensor:
 
     # Begin Propagate Forward Pre Hook #########################################
     if not torch.jit.is_scripting() and not is_compiling():

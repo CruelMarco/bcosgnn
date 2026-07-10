@@ -183,3 +183,7 @@ shaique_updates/codes/data/ZINC/raw/train.pickle
 data/MOLHIV/hiv/processed/data.pt
 shaique_updates/codes/data/TUDataset/DD/processed/data.pt
 data/MOLHIV
+shaique_updates/codes/agg_experiments/saved_models
+shaique_updates/codes/agg_experiments/runlogs
+shaique_updates/codes/exp_mode/runlogs
+shaique_updates/codes/agg_experiments/wandb_api.txt
