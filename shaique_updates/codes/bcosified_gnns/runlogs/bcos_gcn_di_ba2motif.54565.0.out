@@ -1,0 +1,199 @@
+Device: cuda
+Loading data from: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/data/Custom_BA2Motif/custom_ba2motif_dataset.pt
+Successfully loaded 1000 graphs.
+====================================================================================================
+vanilla_gcn_add_readout_then_agg | seed=0
+====================================================================================================
+Epoch 001 | train_loss=0.6883 train_acc=0.5557 | val_loss=0.6468 val_acc=0.7100 | lr=3.00e-04
+Epoch 005 | train_loss=0.4660 train_acc=0.8457 | val_loss=0.4093 val_acc=0.9200 | lr=3.00e-04
+Epoch 010 | train_loss=0.1278 train_acc=0.9886 | val_loss=0.0933 val_acc=1.0000 | lr=3.00e-04
+Epoch 015 | train_loss=0.0305 train_acc=0.9957 | val_loss=0.0196 val_acc=1.0000 | lr=3.00e-04
+Epoch 020 | train_loss=0.0148 train_acc=0.9971 | val_loss=0.0081 val_acc=1.0000 | lr=3.00e-04
+Epoch 025 | train_loss=0.0065 train_acc=0.9986 | val_loss=0.0041 val_acc=1.0000 | lr=3.00e-04
+Epoch 030 | train_loss=0.0036 train_acc=1.0000 | val_loss=0.0022 val_acc=1.0000 | lr=3.00e-04
+Epoch 035 | train_loss=0.0023 train_acc=1.0000 | val_loss=0.0016 val_acc=1.0000 | lr=3.00e-04
+Epoch 040 | train_loss=0.0017 train_acc=1.0000 | val_loss=0.0013 val_acc=1.0000 | lr=3.00e-04
+Epoch 045 | train_loss=0.0011 train_acc=1.0000 | val_loss=0.0008 val_acc=1.0000 | lr=3.00e-04
+Epoch 050 | train_loss=0.0008 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+Epoch 055 | train_loss=0.0005 train_acc=1.0000 | val_loss=0.0004 val_acc=1.0000 | lr=3.00e-04
+Epoch 060 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0003 val_acc=1.0000 | lr=3.00e-04
+Epoch 065 | train_loss=0.0003 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=3.00e-04
+Epoch 070 | train_loss=0.0002 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=3.00e-04
+Epoch 075 | train_loss=0.0002 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=3.00e-04
+Epoch 080 | train_loss=0.0002 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 085 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 090 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 095 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Early stopping at epoch 98 (best_epoch=73, best_val_loss=0.0002)
+vanilla_gcn_add_readout_then_agg | seed=0 | best_epoch=73 | ckpt=best_vanilla_gcn_add_readout_then_agg_seed_0.pt | test_acc=1.0000 | test_clf_auroc=1.0000 | test_expl_auroc=nan | test_jaccard=nan
+====================================================================================================
+vanilla_gcn_add_readout_then_agg | seed=1
+====================================================================================================
+Epoch 001 | train_loss=1.2601 train_acc=0.5000 | val_loss=0.7187 val_acc=0.5000 | lr=3.00e-04
+Epoch 005 | train_loss=0.6351 train_acc=0.6614 | val_loss=0.6275 val_acc=0.7500 | lr=3.00e-04
+Epoch 010 | train_loss=0.4872 train_acc=0.8071 | val_loss=0.4769 val_acc=0.8400 | lr=3.00e-04
+Epoch 015 | train_loss=0.1913 train_acc=0.9700 | val_loss=0.1596 val_acc=0.9700 | lr=3.00e-04
+Epoch 020 | train_loss=0.0349 train_acc=0.9986 | val_loss=0.0241 val_acc=1.0000 | lr=3.00e-04
+Epoch 025 | train_loss=0.0155 train_acc=0.9986 | val_loss=0.0076 val_acc=1.0000 | lr=3.00e-04
+Epoch 030 | train_loss=0.0135 train_acc=0.9986 | val_loss=0.0064 val_acc=1.0000 | lr=3.00e-04
+Epoch 035 | train_loss=0.0078 train_acc=0.9986 | val_loss=0.0037 val_acc=1.0000 | lr=3.00e-04
+Epoch 040 | train_loss=0.0079 train_acc=0.9986 | val_loss=0.0038 val_acc=1.0000 | lr=3.00e-04
+Epoch 045 | train_loss=0.0054 train_acc=0.9986 | val_loss=0.0019 val_acc=1.0000 | lr=3.00e-04
+Epoch 050 | train_loss=0.0043 train_acc=0.9986 | val_loss=0.0017 val_acc=1.0000 | lr=3.00e-04
+Epoch 055 | train_loss=0.0036 train_acc=0.9986 | val_loss=0.0012 val_acc=1.0000 | lr=3.00e-04
+Epoch 060 | train_loss=0.0032 train_acc=0.9986 | val_loss=0.0010 val_acc=1.0000 | lr=3.00e-04
+Epoch 065 | train_loss=0.0023 train_acc=0.9986 | val_loss=0.0008 val_acc=1.0000 | lr=3.00e-04
+Epoch 070 | train_loss=0.0019 train_acc=1.0000 | val_loss=0.0007 val_acc=1.0000 | lr=3.00e-04
+Epoch 075 | train_loss=0.0015 train_acc=1.0000 | val_loss=0.0006 val_acc=1.0000 | lr=3.00e-04
+Epoch 080 | train_loss=0.0012 train_acc=1.0000 | val_loss=0.0004 val_acc=1.0000 | lr=3.00e-04
+Epoch 085 | train_loss=0.0010 train_acc=1.0000 | val_loss=0.0003 val_acc=1.0000 | lr=1.50e-04
+Epoch 090 | train_loss=0.0009 train_acc=1.0000 | val_loss=0.0003 val_acc=1.0000 | lr=1.50e-04
+Epoch 095 | train_loss=0.0009 train_acc=1.0000 | val_loss=0.0003 val_acc=1.0000 | lr=1.50e-04
+Epoch 100 | train_loss=0.0008 train_acc=1.0000 | val_loss=0.0003 val_acc=1.0000 | lr=1.50e-04
+Epoch 105 | train_loss=0.0007 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=1.50e-04
+Epoch 110 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=1.50e-04
+Epoch 115 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=1.50e-04
+Epoch 120 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=1.50e-04
+Early stopping at epoch 123 (best_epoch=98, best_val_loss=0.0003)
+vanilla_gcn_add_readout_then_agg | seed=1 | best_epoch=98 | ckpt=best_vanilla_gcn_add_readout_then_agg_seed_1.pt | test_acc=1.0000 | test_clf_auroc=1.0000 | test_expl_auroc=nan | test_jaccard=nan
+====================================================================================================
+vanilla_gcn_add_readout_then_agg | seed=2
+====================================================================================================
+Epoch 001 | train_loss=0.7507 train_acc=0.5457 | val_loss=0.6768 val_acc=0.5000 | lr=3.00e-04
+Epoch 005 | train_loss=0.5293 train_acc=0.8371 | val_loss=0.4919 val_acc=0.8800 | lr=3.00e-04
+Epoch 010 | train_loss=0.1719 train_acc=0.9729 | val_loss=0.1351 val_acc=0.9900 | lr=3.00e-04
+Epoch 015 | train_loss=0.0251 train_acc=0.9986 | val_loss=0.0170 val_acc=1.0000 | lr=3.00e-04
+Epoch 020 | train_loss=0.0071 train_acc=1.0000 | val_loss=0.0042 val_acc=1.0000 | lr=3.00e-04
+Epoch 025 | train_loss=0.0031 train_acc=1.0000 | val_loss=0.0016 val_acc=1.0000 | lr=3.00e-04
+Epoch 030 | train_loss=0.0018 train_acc=1.0000 | val_loss=0.0009 val_acc=1.0000 | lr=3.00e-04
+Epoch 035 | train_loss=0.0011 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+Epoch 040 | train_loss=0.0007 train_acc=1.0000 | val_loss=0.0003 val_acc=1.0000 | lr=3.00e-04
+Epoch 045 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=3.00e-04
+Epoch 050 | train_loss=0.0003 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 055 | train_loss=0.0002 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 060 | train_loss=0.0002 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 065 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 070 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Epoch 075 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Epoch 080 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Early stopping at epoch 81 (best_epoch=56, best_val_loss=0.0001)
+vanilla_gcn_add_readout_then_agg | seed=2 | best_epoch=56 | ckpt=best_vanilla_gcn_add_readout_then_agg_seed_2.pt | test_acc=1.0000 | test_clf_auroc=1.0000 | test_expl_auroc=nan | test_jaccard=nan
+====================================================================================================
+bcos_gcn_add_readout_then_agg | seed=0
+====================================================================================================
+Epoch 001 | train_loss=0.6930 train_acc=0.5657 | val_loss=0.6928 val_acc=0.5800 | lr=3.00e-04
+Epoch 005 | train_loss=0.6172 train_acc=0.5871 | val_loss=0.5515 val_acc=0.7400 | lr=3.00e-04
+Epoch 010 | train_loss=0.0446 train_acc=0.9900 | val_loss=0.0297 val_acc=1.0000 | lr=3.00e-04
+Epoch 015 | train_loss=0.0182 train_acc=0.9971 | val_loss=0.0061 val_acc=1.0000 | lr=3.00e-04
+Epoch 020 | train_loss=0.0096 train_acc=0.9957 | val_loss=0.0034 val_acc=1.0000 | lr=3.00e-04
+Epoch 025 | train_loss=0.0102 train_acc=0.9971 | val_loss=0.0019 val_acc=1.0000 | lr=3.00e-04
+Epoch 030 | train_loss=0.0021 train_acc=1.0000 | val_loss=0.0012 val_acc=1.0000 | lr=3.00e-04
+Epoch 035 | train_loss=0.0010 train_acc=1.0000 | val_loss=0.0006 val_acc=1.0000 | lr=3.00e-04
+Epoch 040 | train_loss=0.0007 train_acc=1.0000 | val_loss=0.0006 val_acc=1.0000 | lr=3.00e-04
+Epoch 045 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0003 val_acc=1.0000 | lr=3.00e-04
+Epoch 050 | train_loss=0.0003 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=3.00e-04
+Epoch 055 | train_loss=0.0002 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=3.00e-04
+Epoch 060 | train_loss=0.0002 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 065 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 070 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 075 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 080 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Early stopping at epoch 83 (best_epoch=58, best_val_loss=0.0001)
+bcos_gcn_add_readout_then_agg | seed=0 | best_epoch=58 | ckpt=best_bcos_gcn_add_readout_then_agg_seed_0.pt | test_acc=1.0000 | test_clf_auroc=1.0000 | test_expl_auroc=0.9954 | test_jaccard=0.8967
+====================================================================================================
+bcos_gcn_add_readout_then_agg | seed=1
+====================================================================================================
+Epoch 001 | train_loss=0.6930 train_acc=0.5114 | val_loss=0.6926 val_acc=0.5000 | lr=3.00e-04
+Epoch 005 | train_loss=0.5877 train_acc=0.5429 | val_loss=0.5421 val_acc=0.5500 | lr=3.00e-04
+Epoch 010 | train_loss=0.0159 train_acc=0.9986 | val_loss=0.0120 val_acc=1.0000 | lr=3.00e-04
+Epoch 015 | train_loss=0.0013 train_acc=1.0000 | val_loss=0.0015 val_acc=1.0000 | lr=3.00e-04
+Epoch 020 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0007 val_acc=1.0000 | lr=3.00e-04
+Epoch 025 | train_loss=0.0003 train_acc=1.0000 | val_loss=0.0004 val_acc=1.0000 | lr=3.00e-04
+Epoch 030 | train_loss=0.0002 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=3.00e-04
+Epoch 035 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=3.00e-04
+Epoch 040 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 045 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 050 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 055 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 060 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Epoch 065 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Early stopping at epoch 66 (best_epoch=41, best_val_loss=0.0001)
+bcos_gcn_add_readout_then_agg | seed=1 | best_epoch=41 | ckpt=best_bcos_gcn_add_readout_then_agg_seed_1.pt | test_acc=1.0000 | test_clf_auroc=1.0000 | test_expl_auroc=0.8990 | test_jaccard=0.7468
+====================================================================================================
+bcos_gcn_add_readout_then_agg | seed=2
+====================================================================================================
+Epoch 001 | train_loss=0.6931 train_acc=0.5000 | val_loss=0.6927 val_acc=0.5000 | lr=3.00e-04
+Epoch 005 | train_loss=0.6175 train_acc=0.5171 | val_loss=0.5827 val_acc=0.5800 | lr=3.00e-04
+Epoch 010 | train_loss=0.0289 train_acc=0.9971 | val_loss=0.0118 val_acc=1.0000 | lr=3.00e-04
+Epoch 015 | train_loss=0.0012 train_acc=1.0000 | val_loss=0.0008 val_acc=1.0000 | lr=3.00e-04
+Epoch 020 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0003 val_acc=1.0000 | lr=3.00e-04
+Epoch 025 | train_loss=0.0003 train_acc=1.0000 | val_loss=0.0002 val_acc=1.0000 | lr=3.00e-04
+Epoch 030 | train_loss=0.0002 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 035 | train_loss=0.0002 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 040 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0001 val_acc=1.0000 | lr=3.00e-04
+Epoch 045 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Epoch 050 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Epoch 055 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Epoch 060 | train_loss=0.0001 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Epoch 065 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Epoch 070 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Epoch 075 | train_loss=0.0000 train_acc=1.0000 | val_loss=0.0000 val_acc=1.0000 | lr=3.00e-04
+Early stopping at epoch 76 (best_epoch=51, best_val_loss=0.0000)
+bcos_gcn_add_readout_then_agg | seed=2 | best_epoch=51 | ckpt=best_bcos_gcn_add_readout_then_agg_seed_2.pt | test_acc=1.0000 | test_clf_auroc=1.0000 | test_expl_auroc=0.9581 | test_jaccard=0.8036
+
+Per-seed test metrics:
+shape: (6, 9)
+┌────────────┬──────┬────────────┬────────────┬───┬──────────┬────────────┬────────────┬───────────┐
+│ experiment ┆ seed ┆ best_epoch ┆ best_val_l ┆ … ┆ test_acc ┆ test_clf_a ┆ test_expl_ ┆ test_jacc │
+│ ---        ┆ ---  ┆ ---        ┆ oss        ┆   ┆ ---      ┆ uroc       ┆ auroc      ┆ ard       │
+│ str        ┆ i64  ┆ i64        ┆ ---        ┆   ┆ f64      ┆ ---        ┆ ---        ┆ ---       │
+│            ┆      ┆            ┆ f64        ┆   ┆          ┆ f64        ┆ f64        ┆ f64       │
+╞════════════╪══════╪════════════╪════════════╪═══╪══════════╪════════════╪════════════╪═══════════╡
+│ vanilla_gc ┆ 0    ┆ 73         ┆ 0.000158   ┆ … ┆ 1.0      ┆ 1.0        ┆ NaN        ┆ NaN       │
+│ n_add_read ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ out_then_a ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ …          ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ vanilla_gc ┆ 1    ┆ 98         ┆ 0.000256   ┆ … ┆ 1.0      ┆ 1.0        ┆ NaN        ┆ NaN       │
+│ n_add_read ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ out_then_a ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ …          ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ vanilla_gc ┆ 2    ┆ 56         ┆ 0.000093   ┆ … ┆ 1.0      ┆ 1.0        ┆ NaN        ┆ NaN       │
+│ n_add_read ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ out_then_a ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ …          ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ bcos_gcn_a ┆ 0    ┆ 58         ┆ 0.000122   ┆ … ┆ 1.0      ┆ 1.0        ┆ 0.995374   ┆ 0.896667  │
+│ dd_readout ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ _then_agg  ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ bcos_gcn_a ┆ 1    ┆ 41         ┆ 0.000109   ┆ … ┆ 1.0      ┆ 1.0        ┆ 0.898961   ┆ 0.746806  │
+│ dd_readout ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ _then_agg  ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ bcos_gcn_a ┆ 2    ┆ 51         ┆ 0.000034   ┆ … ┆ 1.0      ┆ 1.0        ┆ 0.958092   ┆ 0.803571  │
+│ dd_readout ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ _then_agg  ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+└────────────┴──────┴────────────┴────────────┴───┴──────────┴────────────┴────────────┴───────────┘
+
+Mean ± std across seeds:
+shape: (2, 11)
+┌───────────┬───────────┬───────────┬───────────┬───┬───────────┬───────────┬───────────┬──────────┐
+│ test_loss ┆ test_loss ┆ test_acc_ ┆ test_acc_ ┆ … ┆ test_expl ┆ test_jacc ┆ test_jacc ┆ experime │
+│ _mean     ┆ _std      ┆ mean      ┆ std       ┆   ┆ _auroc_st ┆ ard_mean  ┆ ard_std   ┆ nt       │
+│ ---       ┆ ---       ┆ ---       ┆ ---       ┆   ┆ d         ┆ ---       ┆ ---       ┆ ---      │
+│ f64       ┆ f64       ┆ f64       ┆ f64       ┆   ┆ ---       ┆ f64       ┆ f64       ┆ str      │
+│           ┆           ┆           ┆           ┆   ┆ f64       ┆           ┆           ┆          │
+╞═══════════╪═══════════╪═══════════╪═══════════╪═══╪═══════════╪═══════════╪═══════════╪══════════╡
+│ 0.001006  ┆ 0.001272  ┆ 1.0       ┆ 0.0       ┆ … ┆ NaN       ┆ NaN       ┆ NaN       ┆ vanilla_ │
+│           ┆           ┆           ┆           ┆   ┆           ┆           ┆           ┆ gcn_add_ │
+│           ┆           ┆           ┆           ┆   ┆           ┆           ┆           ┆ readout_ │
+│           ┆           ┆           ┆           ┆   ┆           ┆           ┆           ┆ then_a…  │
+│ 0.000188  ┆ 0.000061  ┆ 1.0       ┆ 0.0       ┆ … ┆ 0.048617  ┆ 0.815681  ┆ 0.075661  ┆ bcos_gcn │
+│           ┆           ┆           ┆           ┆   ┆           ┆           ┆           ┆ _add_rea │
+│           ┆           ┆           ┆           ┆   ┆           ┆           ┆           ┆ dout_the │
+│           ┆           ┆           ┆           ┆   ┆           ┆           ┆           ┆ n_agg    │
+└───────────┴───────────┴───────────┴───────────┴───┴───────────┴───────────┴───────────┴──────────┘
+
+Saved per-seed CSV: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/bcosified_gnns/results/gcn_ba2motif_all_seed_results.csv
+Saved summary CSV: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/bcosified_gnns/results/gcn_ba2motif_summary_mean_std.csv
+Saved combined CSV: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/bcosified_gnns/results/gcn_ba2motif_all_results_with_summary.csv
+
+Completeness checks (best B-COS seeds):
+- bcos_gcn_add_readout_then_agg: seed=0 | completeness_mae=8.49e-07 | graphs=200 | plot=/home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/bcosified_gnns/results/completeness_plots/completeness_bcos_gcn_add_readout_then_agg_seed_0.pdf

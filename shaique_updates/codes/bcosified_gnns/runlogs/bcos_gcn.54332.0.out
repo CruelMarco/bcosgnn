@@ -1,0 +1,215 @@
+Device: cuda
+Loading data from: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/data/Custom_BA2Motif/custom_ba2motif_dataset.pt
+Successfully loaded 1000 graphs.
+====================================================================================================
+vanilla_gcn_mean | seed=0
+====================================================================================================
+Epoch 001 | train_loss=0.6921 train_acc=0.5486 | val_loss=0.6904 val_acc=0.6900 | lr=3.00e-04
+Epoch 005 | train_loss=0.6676 train_acc=0.7171 | val_loss=0.6562 val_acc=0.7300 | lr=3.00e-04
+Epoch 010 | train_loss=0.5268 train_acc=0.7543 | val_loss=0.4956 val_acc=0.7500 | lr=3.00e-04
+Epoch 015 | train_loss=0.4777 train_acc=0.7671 | val_loss=0.4564 val_acc=0.7900 | lr=3.00e-04
+Epoch 020 | train_loss=0.4624 train_acc=0.7743 | val_loss=0.4519 val_acc=0.7900 | lr=3.00e-04
+Epoch 025 | train_loss=0.4575 train_acc=0.7843 | val_loss=0.4777 val_acc=0.7900 | lr=3.00e-04
+Epoch 030 | train_loss=0.4355 train_acc=0.7957 | val_loss=0.4497 val_acc=0.7700 | lr=3.00e-04
+Epoch 035 | train_loss=0.4368 train_acc=0.7829 | val_loss=0.4549 val_acc=0.7800 | lr=3.00e-04
+Epoch 040 | train_loss=0.4358 train_acc=0.8029 | val_loss=0.4509 val_acc=0.7800 | lr=3.00e-04
+Epoch 045 | train_loss=0.4380 train_acc=0.7914 | val_loss=0.4480 val_acc=0.7800 | lr=1.50e-04
+Epoch 050 | train_loss=0.4294 train_acc=0.8057 | val_loss=0.4468 val_acc=0.7700 | lr=7.50e-05
+Epoch 055 | train_loss=0.4279 train_acc=0.8000 | val_loss=0.4474 val_acc=0.7700 | lr=3.75e-05
+Epoch 060 | train_loss=0.4278 train_acc=0.8014 | val_loss=0.4474 val_acc=0.7700 | lr=1.87e-05
+Early stopping at epoch 62 (best_epoch=37, best_val_loss=0.4468)
+vanilla_gcn_mean | seed=0 | best_epoch=37 | ckpt=best_vanilla_gcn_mean_seed_0.pt | test_acc=0.8350 | test_clf_auroc=0.9047 | test_expl_auroc=nan | test_jaccard=nan
+====================================================================================================
+vanilla_gcn_mean | seed=1
+====================================================================================================
+Epoch 001 | train_loss=0.6948 train_acc=0.5000 | val_loss=0.6936 val_acc=0.5000 | lr=3.00e-04
+Epoch 005 | train_loss=0.6786 train_acc=0.7057 | val_loss=0.6749 val_acc=0.6700 | lr=3.00e-04
+Epoch 010 | train_loss=0.5378 train_acc=0.7500 | val_loss=0.5733 val_acc=0.7100 | lr=3.00e-04
+Epoch 015 | train_loss=0.4730 train_acc=0.7671 | val_loss=0.5719 val_acc=0.7400 | lr=3.00e-04
+Epoch 020 | train_loss=0.4520 train_acc=0.7871 | val_loss=0.5793 val_acc=0.6700 | lr=1.50e-04
+Epoch 025 | train_loss=0.4410 train_acc=0.8000 | val_loss=0.5723 val_acc=0.6700 | lr=7.50e-05
+Epoch 030 | train_loss=0.4343 train_acc=0.8014 | val_loss=0.5734 val_acc=0.6700 | lr=3.75e-05
+Epoch 035 | train_loss=0.4322 train_acc=0.8043 | val_loss=0.5720 val_acc=0.6800 | lr=1.87e-05
+Early stopping at epoch 36 (best_epoch=11, best_val_loss=0.5648)
+vanilla_gcn_mean | seed=1 | best_epoch=11 | ckpt=best_vanilla_gcn_mean_seed_1.pt | test_acc=0.7750 | test_clf_auroc=0.8489 | test_expl_auroc=nan | test_jaccard=nan
+====================================================================================================
+vanilla_gcn_mean | seed=2
+====================================================================================================
+Epoch 001 | train_loss=0.6925 train_acc=0.5000 | val_loss=0.6912 val_acc=0.5000 | lr=3.00e-04
+Epoch 005 | train_loss=0.6716 train_acc=0.7486 | val_loss=0.6654 val_acc=0.7400 | lr=3.00e-04
+Epoch 010 | train_loss=0.5109 train_acc=0.7671 | val_loss=0.4837 val_acc=0.7900 | lr=3.00e-04
+Epoch 015 | train_loss=0.4597 train_acc=0.7914 | val_loss=0.4723 val_acc=0.7900 | lr=3.00e-04
+Epoch 020 | train_loss=0.4483 train_acc=0.7914 | val_loss=0.4329 val_acc=0.8100 | lr=3.00e-04
+Epoch 025 | train_loss=0.4350 train_acc=0.8043 | val_loss=0.4264 val_acc=0.8000 | lr=3.00e-04
+Epoch 030 | train_loss=0.4369 train_acc=0.7943 | val_loss=0.4668 val_acc=0.7700 | lr=3.00e-04
+Epoch 035 | train_loss=0.4351 train_acc=0.8000 | val_loss=0.4202 val_acc=0.8200 | lr=3.00e-04
+Epoch 040 | train_loss=0.4363 train_acc=0.7857 | val_loss=0.4506 val_acc=0.7900 | lr=3.00e-04
+Epoch 045 | train_loss=0.4274 train_acc=0.8057 | val_loss=0.4265 val_acc=0.7900 | lr=1.50e-04
+Epoch 050 | train_loss=0.4249 train_acc=0.8043 | val_loss=0.4239 val_acc=0.8100 | lr=1.50e-04
+Epoch 055 | train_loss=0.4248 train_acc=0.8071 | val_loss=0.4204 val_acc=0.8100 | lr=7.50e-05
+Epoch 060 | train_loss=0.4251 train_acc=0.8043 | val_loss=0.4229 val_acc=0.8100 | lr=3.75e-05
+Epoch 065 | train_loss=0.4245 train_acc=0.8043 | val_loss=0.4217 val_acc=0.8100 | lr=1.87e-05
+Epoch 070 | train_loss=0.4242 train_acc=0.8043 | val_loss=0.4212 val_acc=0.8100 | lr=9.37e-06
+Early stopping at epoch 71 (best_epoch=46, best_val_loss=0.4186)
+vanilla_gcn_mean | seed=2 | best_epoch=46 | ckpt=best_vanilla_gcn_mean_seed_2.pt | test_acc=0.7800 | test_clf_auroc=0.8862 | test_expl_auroc=nan | test_jaccard=nan
+====================================================================================================
+bcos_gcn_mean_readout_then_agg | seed=0
+====================================================================================================
+Epoch 001 | train_loss=0.6931 train_acc=0.5000 | val_loss=0.6931 val_acc=0.5000 | lr=3.00e-04
+Epoch 005 | train_loss=0.6931 train_acc=0.5043 | val_loss=0.6930 val_acc=0.5000 | lr=3.00e-04
+Epoch 010 | train_loss=0.6495 train_acc=0.5100 | val_loss=0.6248 val_acc=0.5200 | lr=3.00e-04
+Epoch 015 | train_loss=0.3390 train_acc=0.8843 | val_loss=0.2855 val_acc=0.8900 | lr=3.00e-04
+Epoch 020 | train_loss=0.1763 train_acc=0.9643 | val_loss=0.1266 val_acc=0.9600 | lr=3.00e-04
+Epoch 025 | train_loss=0.1152 train_acc=0.9829 | val_loss=0.0750 val_acc=1.0000 | lr=3.00e-04
+Epoch 030 | train_loss=0.0842 train_acc=0.9900 | val_loss=0.0404 val_acc=1.0000 | lr=3.00e-04
+Epoch 035 | train_loss=0.0615 train_acc=0.9957 | val_loss=0.0248 val_acc=1.0000 | lr=3.00e-04
+Epoch 040 | train_loss=0.0533 train_acc=0.9957 | val_loss=0.0215 val_acc=1.0000 | lr=3.00e-04
+Epoch 045 | train_loss=0.0462 train_acc=0.9957 | val_loss=0.0221 val_acc=1.0000 | lr=3.00e-04
+Epoch 050 | train_loss=0.0424 train_acc=0.9971 | val_loss=0.0169 val_acc=1.0000 | lr=3.00e-04
+Epoch 055 | train_loss=0.0406 train_acc=0.9971 | val_loss=0.0153 val_acc=1.0000 | lr=3.00e-04
+Epoch 060 | train_loss=0.0400 train_acc=0.9971 | val_loss=0.0256 val_acc=1.0000 | lr=1.50e-04
+Epoch 065 | train_loss=0.0292 train_acc=0.9971 | val_loss=0.0186 val_acc=1.0000 | lr=1.50e-04
+Epoch 070 | train_loss=0.0289 train_acc=0.9971 | val_loss=0.0164 val_acc=1.0000 | lr=7.50e-05
+Epoch 075 | train_loss=0.0280 train_acc=0.9971 | val_loss=0.0163 val_acc=1.0000 | lr=3.75e-05
+Epoch 080 | train_loss=0.0275 train_acc=0.9971 | val_loss=0.0160 val_acc=1.0000 | lr=1.87e-05
+Epoch 085 | train_loss=0.0272 train_acc=0.9971 | val_loss=0.0161 val_acc=1.0000 | lr=9.37e-06
+Early stopping at epoch 89 (best_epoch=64, best_val_loss=0.0138)
+bcos_gcn_mean_readout_then_agg | seed=0 | best_epoch=64 | ckpt=best_bcos_gcn_mean_readout_then_agg_seed_0.pt | test_acc=1.0000 | test_clf_auroc=1.0000 | test_expl_auroc=0.6033 | test_jaccard=0.4096
+====================================================================================================
+bcos_gcn_mean_readout_then_agg | seed=1
+====================================================================================================
+Epoch 001 | train_loss=0.6931 train_acc=0.5943 | val_loss=0.6931 val_acc=0.5400 | lr=3.00e-04
+Epoch 005 | train_loss=0.6931 train_acc=0.5071 | val_loss=0.6931 val_acc=0.5000 | lr=3.00e-04
+Epoch 010 | train_loss=0.6689 train_acc=0.5000 | val_loss=0.6683 val_acc=0.5000 | lr=3.00e-04
+Epoch 015 | train_loss=0.4312 train_acc=0.8686 | val_loss=0.4301 val_acc=0.8100 | lr=3.00e-04
+Epoch 020 | train_loss=0.1664 train_acc=0.9586 | val_loss=0.2042 val_acc=0.9400 | lr=3.00e-04
+Epoch 025 | train_loss=0.0489 train_acc=0.9986 | val_loss=0.0567 val_acc=1.0000 | lr=3.00e-04
+Epoch 030 | train_loss=0.0228 train_acc=1.0000 | val_loss=0.0297 val_acc=1.0000 | lr=3.00e-04
+Epoch 035 | train_loss=0.0142 train_acc=1.0000 | val_loss=0.0188 val_acc=1.0000 | lr=3.00e-04
+Epoch 040 | train_loss=0.0099 train_acc=1.0000 | val_loss=0.0127 val_acc=1.0000 | lr=3.00e-04
+Epoch 045 | train_loss=0.0072 train_acc=1.0000 | val_loss=0.0094 val_acc=1.0000 | lr=3.00e-04
+Epoch 050 | train_loss=0.0056 train_acc=1.0000 | val_loss=0.0071 val_acc=1.0000 | lr=3.00e-04
+Epoch 055 | train_loss=0.0043 train_acc=1.0000 | val_loss=0.0056 val_acc=1.0000 | lr=3.00e-04
+Epoch 060 | train_loss=0.0035 train_acc=1.0000 | val_loss=0.0048 val_acc=1.0000 | lr=3.00e-04
+Epoch 065 | train_loss=0.0030 train_acc=1.0000 | val_loss=0.0039 val_acc=1.0000 | lr=3.00e-04
+Epoch 070 | train_loss=0.0026 train_acc=1.0000 | val_loss=0.0035 val_acc=1.0000 | lr=3.00e-04
+Epoch 075 | train_loss=0.0022 train_acc=1.0000 | val_loss=0.0029 val_acc=1.0000 | lr=3.00e-04
+Epoch 080 | train_loss=0.0020 train_acc=1.0000 | val_loss=0.0026 val_acc=1.0000 | lr=3.00e-04
+Epoch 085 | train_loss=0.0017 train_acc=1.0000 | val_loss=0.0023 val_acc=1.0000 | lr=3.00e-04
+Epoch 090 | train_loss=0.0015 train_acc=1.0000 | val_loss=0.0021 val_acc=1.0000 | lr=3.00e-04
+Epoch 095 | train_loss=0.0014 train_acc=1.0000 | val_loss=0.0019 val_acc=1.0000 | lr=3.00e-04
+Epoch 100 | train_loss=0.0013 train_acc=1.0000 | val_loss=0.0017 val_acc=1.0000 | lr=3.00e-04
+Epoch 105 | train_loss=0.0012 train_acc=1.0000 | val_loss=0.0016 val_acc=1.0000 | lr=3.00e-04
+Epoch 110 | train_loss=0.0011 train_acc=1.0000 | val_loss=0.0014 val_acc=1.0000 | lr=3.00e-04
+Epoch 115 | train_loss=0.0010 train_acc=1.0000 | val_loss=0.0013 val_acc=1.0000 | lr=3.00e-04
+Epoch 120 | train_loss=0.0009 train_acc=1.0000 | val_loss=0.0012 val_acc=1.0000 | lr=3.00e-04
+Epoch 125 | train_loss=0.0010 train_acc=1.0000 | val_loss=0.0013 val_acc=1.0000 | lr=3.00e-04
+Epoch 130 | train_loss=0.0008 train_acc=1.0000 | val_loss=0.0010 val_acc=1.0000 | lr=3.00e-04
+Epoch 135 | train_loss=0.0007 train_acc=1.0000 | val_loss=0.0010 val_acc=1.0000 | lr=3.00e-04
+Epoch 140 | train_loss=0.0007 train_acc=1.0000 | val_loss=0.0009 val_acc=1.0000 | lr=3.00e-04
+Epoch 145 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0008 val_acc=1.0000 | lr=3.00e-04
+Epoch 150 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0008 val_acc=1.0000 | lr=3.00e-04
+Epoch 155 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0007 val_acc=1.0000 | lr=3.00e-04
+Epoch 160 | train_loss=0.0005 train_acc=1.0000 | val_loss=0.0007 val_acc=1.0000 | lr=3.00e-04
+Epoch 165 | train_loss=0.0005 train_acc=1.0000 | val_loss=0.0007 val_acc=1.0000 | lr=3.00e-04
+Epoch 170 | train_loss=0.0005 train_acc=1.0000 | val_loss=0.0007 val_acc=1.0000 | lr=3.00e-04
+Epoch 175 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0006 val_acc=1.0000 | lr=3.00e-04
+Epoch 180 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+Epoch 185 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+Epoch 190 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+Epoch 195 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+Epoch 200 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+bcos_gcn_mean_readout_then_agg | seed=1 | best_epoch=183 | ckpt=best_bcos_gcn_mean_readout_then_agg_seed_1.pt | test_acc=1.0000 | test_clf_auroc=1.0000 | test_expl_auroc=0.6437 | test_jaccard=0.5113
+====================================================================================================
+bcos_gcn_mean_readout_then_agg | seed=2
+====================================================================================================
+Epoch 001 | train_loss=0.6931 train_acc=0.5000 | val_loss=0.6931 val_acc=0.5000 | lr=3.00e-04
+Epoch 005 | train_loss=0.6931 train_acc=0.5000 | val_loss=0.6931 val_acc=0.5000 | lr=3.00e-04
+Epoch 010 | train_loss=0.6768 train_acc=0.5000 | val_loss=0.6701 val_acc=0.5000 | lr=3.00e-04
+Epoch 015 | train_loss=0.4734 train_acc=0.8400 | val_loss=0.4314 val_acc=0.8400 | lr=3.00e-04
+Epoch 020 | train_loss=0.2285 train_acc=0.9257 | val_loss=0.1976 val_acc=0.9200 | lr=3.00e-04
+Epoch 025 | train_loss=0.0781 train_acc=0.9929 | val_loss=0.0740 val_acc=0.9900 | lr=3.00e-04
+Epoch 030 | train_loss=0.0324 train_acc=1.0000 | val_loss=0.0310 val_acc=1.0000 | lr=3.00e-04
+Epoch 035 | train_loss=0.0178 train_acc=1.0000 | val_loss=0.0172 val_acc=1.0000 | lr=3.00e-04
+Epoch 040 | train_loss=0.0116 train_acc=1.0000 | val_loss=0.0109 val_acc=1.0000 | lr=3.00e-04
+Epoch 045 | train_loss=0.0087 train_acc=1.0000 | val_loss=0.0076 val_acc=1.0000 | lr=3.00e-04
+Epoch 050 | train_loss=0.0059 train_acc=1.0000 | val_loss=0.0055 val_acc=1.0000 | lr=3.00e-04
+Epoch 055 | train_loss=0.0047 train_acc=1.0000 | val_loss=0.0043 val_acc=1.0000 | lr=3.00e-04
+Epoch 060 | train_loss=0.0037 train_acc=1.0000 | val_loss=0.0034 val_acc=1.0000 | lr=3.00e-04
+Epoch 065 | train_loss=0.0031 train_acc=1.0000 | val_loss=0.0028 val_acc=1.0000 | lr=3.00e-04
+Epoch 070 | train_loss=0.0026 train_acc=1.0000 | val_loss=0.0023 val_acc=1.0000 | lr=3.00e-04
+Epoch 075 | train_loss=0.0022 train_acc=1.0000 | val_loss=0.0020 val_acc=1.0000 | lr=3.00e-04
+Epoch 080 | train_loss=0.0019 train_acc=1.0000 | val_loss=0.0017 val_acc=1.0000 | lr=3.00e-04
+Epoch 085 | train_loss=0.0017 train_acc=1.0000 | val_loss=0.0015 val_acc=1.0000 | lr=3.00e-04
+Epoch 090 | train_loss=0.0015 train_acc=1.0000 | val_loss=0.0014 val_acc=1.0000 | lr=3.00e-04
+Epoch 095 | train_loss=0.0014 train_acc=1.0000 | val_loss=0.0012 val_acc=1.0000 | lr=3.00e-04
+Epoch 100 | train_loss=0.0012 train_acc=1.0000 | val_loss=0.0011 val_acc=1.0000 | lr=3.00e-04
+Epoch 105 | train_loss=0.0011 train_acc=1.0000 | val_loss=0.0010 val_acc=1.0000 | lr=3.00e-04
+Epoch 110 | train_loss=0.0010 train_acc=1.0000 | val_loss=0.0009 val_acc=1.0000 | lr=3.00e-04
+Epoch 115 | train_loss=0.0009 train_acc=1.0000 | val_loss=0.0008 val_acc=1.0000 | lr=3.00e-04
+Epoch 120 | train_loss=0.0009 train_acc=1.0000 | val_loss=0.0008 val_acc=1.0000 | lr=3.00e-04
+Epoch 125 | train_loss=0.0008 train_acc=1.0000 | val_loss=0.0007 val_acc=1.0000 | lr=3.00e-04
+Epoch 130 | train_loss=0.0007 train_acc=1.0000 | val_loss=0.0007 val_acc=1.0000 | lr=3.00e-04
+Epoch 135 | train_loss=0.0007 train_acc=1.0000 | val_loss=0.0006 val_acc=1.0000 | lr=3.00e-04
+Epoch 140 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0006 val_acc=1.0000 | lr=3.00e-04
+Epoch 145 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+Epoch 150 | train_loss=0.0006 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+Epoch 155 | train_loss=0.0005 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+Epoch 160 | train_loss=0.0005 train_acc=1.0000 | val_loss=0.0005 val_acc=1.0000 | lr=3.00e-04
+Epoch 165 | train_loss=0.0005 train_acc=1.0000 | val_loss=0.0004 val_acc=1.0000 | lr=3.00e-04
+Epoch 170 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0004 val_acc=1.0000 | lr=3.00e-04
+Epoch 175 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0004 val_acc=1.0000 | lr=3.00e-04
+Epoch 180 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0004 val_acc=1.0000 | lr=3.00e-04
+Epoch 185 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0003 val_acc=1.0000 | lr=3.00e-04
+Epoch 190 | train_loss=0.0004 train_acc=1.0000 | val_loss=0.0003 val_acc=1.0000 | lr=3.00e-04
+Early stopping at epoch 191 (best_epoch=166, best_val_loss=0.0004)
+bcos_gcn_mean_readout_then_agg | seed=2 | best_epoch=166 | ckpt=best_bcos_gcn_mean_readout_then_agg_seed_2.pt | test_acc=1.0000 | test_clf_auroc=1.0000 | test_expl_auroc=0.7241 | test_jaccard=0.5510
+
+Per-seed test metrics:
+shape: (6, 9)
+┌────────────┬──────┬────────────┬────────────┬───┬──────────┬────────────┬────────────┬───────────┐
+│ experiment ┆ seed ┆ best_epoch ┆ best_val_l ┆ … ┆ test_acc ┆ test_clf_a ┆ test_expl_ ┆ test_jacc │
+│ ---        ┆ ---  ┆ ---        ┆ oss        ┆   ┆ ---      ┆ uroc       ┆ auroc      ┆ ard       │
+│ str        ┆ i64  ┆ i64        ┆ ---        ┆   ┆ f64      ┆ ---        ┆ ---        ┆ ---       │
+│            ┆      ┆            ┆ f64        ┆   ┆          ┆ f64        ┆ f64        ┆ f64       │
+╞════════════╪══════╪════════════╪════════════╪═══╪══════════╪════════════╪════════════╪═══════════╡
+│ vanilla_gc ┆ 0    ┆ 37         ┆ 0.44675    ┆ … ┆ 0.835    ┆ 0.9047     ┆ NaN        ┆ NaN       │
+│ n_mean     ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ vanilla_gc ┆ 1    ┆ 11         ┆ 0.564764   ┆ … ┆ 0.775    ┆ 0.8489     ┆ NaN        ┆ NaN       │
+│ n_mean     ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ vanilla_gc ┆ 2    ┆ 46         ┆ 0.418584   ┆ … ┆ 0.78     ┆ 0.8862     ┆ NaN        ┆ NaN       │
+│ n_mean     ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ bcos_gcn_m ┆ 0    ┆ 64         ┆ 0.01383    ┆ … ┆ 1.0      ┆ 1.0        ┆ 0.603277   ┆ 0.409563  │
+│ ean_readou ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ t_then_agg ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ bcos_gcn_m ┆ 1    ┆ 183        ┆ 0.000531   ┆ … ┆ 1.0      ┆ 1.0        ┆ 0.643685   ┆ 0.51131   │
+│ ean_readou ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ t_then_agg ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ bcos_gcn_m ┆ 2    ┆ 166        ┆ 0.000418   ┆ … ┆ 1.0      ┆ 1.0        ┆ 0.724067   ┆ 0.550952  │
+│ ean_readou ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+│ t_then_agg ┆      ┆            ┆            ┆   ┆          ┆            ┆            ┆           │
+└────────────┴──────┴────────────┴────────────┴───┴──────────┴────────────┴────────────┴───────────┘
+
+Mean ± std across seeds:
+shape: (2, 11)
+┌───────────┬───────────┬───────────┬───────────┬───┬───────────┬───────────┬───────────┬──────────┐
+│ test_loss ┆ test_loss ┆ test_acc_ ┆ test_acc_ ┆ … ┆ test_expl ┆ test_jacc ┆ test_jacc ┆ experime │
+│ _mean     ┆ _std      ┆ mean      ┆ std       ┆   ┆ _auroc_st ┆ ard_mean  ┆ ard_std   ┆ nt       │
+│ ---       ┆ ---       ┆ ---       ┆ ---       ┆   ┆ d         ┆ ---       ┆ ---       ┆ ---      │
+│ f64       ┆ f64       ┆ f64       ┆ f64       ┆   ┆ ---       ┆ f64       ┆ f64       ┆ str      │
+│           ┆           ┆           ┆           ┆   ┆ f64       ┆           ┆           ┆          │
+╞═══════════╪═══════════╪═══════════╪═══════════╪═══╪═══════════╪═══════════╪═══════════╪══════════╡
+│ 0.437454  ┆ 0.051162  ┆ 0.796667  ┆ 0.033292  ┆ … ┆ NaN       ┆ NaN       ┆ NaN       ┆ vanilla_ │
+│           ┆           ┆           ┆           ┆   ┆           ┆           ┆           ┆ gcn_mean │
+│ 0.005881  ┆ 0.009124  ┆ 1.0       ┆ 0.0       ┆ … ┆ 0.061487  ┆ 0.490608  ┆ 0.072932  ┆ bcos_gcn │
+│           ┆           ┆           ┆           ┆   ┆           ┆           ┆           ┆ _mean_re │
+│           ┆           ┆           ┆           ┆   ┆           ┆           ┆           ┆ adout_th │
+│           ┆           ┆           ┆           ┆   ┆           ┆           ┆           ┆ en_agg   │
+└───────────┴───────────┴───────────┴───────────┴───┴───────────┴───────────┴───────────┴──────────┘
+
+Saved per-seed CSV: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/bcosified_gnns/results/gcn_ba2motif_all_seed_results.csv
+Saved summary CSV: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/bcosified_gnns/results/gcn_ba2motif_summary_mean_std.csv
+Saved combined CSV: /home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/bcosified_gnns/results/gcn_ba2motif_all_results_with_summary.csv
+
+Completeness checks (best B-COS seeds):
+- bcos_gcn_mean_readout_then_agg: seed=2 | completeness_mae=1.21e-06 | graphs=200 | plot=/home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/bcosified_gnns/results/completeness_plots/completeness_bcos_gcn_mean_readout_then_agg_seed_2.pdf

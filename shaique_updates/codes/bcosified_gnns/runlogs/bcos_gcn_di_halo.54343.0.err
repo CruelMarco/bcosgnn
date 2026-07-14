@@ -1,0 +1,4 @@
+/home/moso00002/bcosgnn/bcosgnn/shaique_updates/codes/bcosified_gnns/gcn_dihalo.py:438: RuntimeWarning: Mean of empty slice
+  summary[f"{key}_mean"] = float(np.nanmean(values))
+/home/moso00002/.local/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
