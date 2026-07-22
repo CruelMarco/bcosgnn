@@ -188,3 +188,7 @@ shaique_updates/codes/agg_experiments/saved_models
 shaique_updates/codes/agg_experiments/runlogs
 shaique_updates/codes/exp_mode/runlogs
 shaique_updates/codes/agg_experiments/wandb_api.txt
+shaique_updates/codes/MolHIV/runlogs
+shaique_updates/codes/MNISTsp/runlogs
+shaique_updates/codes/bcosified_gnns/runlogs
+shaique_updates/codes/NCI1_Experiments/runlogs

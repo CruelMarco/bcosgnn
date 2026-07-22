@@ -1,11 +1,11 @@
 universe		= docker
 docker_image		= cruelmarco/pytorch_gnn:v1
-executable              = run_bcos_gcn.sh
+executable              = run_bcos_di_halo.sh
 output                  = runlogs/bcos_gcn_di_halo.$(ClusterId).$(ProcId).out
 error                   = runlogs/bcos_gcn_di_halo.$(ClusterId).$(ProcId).err
 log                     = runlogs/bcos_gcn_di_halo.$(ClusterId).log
 should_transfer_files   = YES
-transfer_input_files    = gcn_dihalo.py, run_bcos_gcn.sh
+transfer_input_files    = gcn_dihalo.py, run_bcos_di_halo.sh
 stream_output = True
 request_GPUs = 1
 request_CPUs = 4

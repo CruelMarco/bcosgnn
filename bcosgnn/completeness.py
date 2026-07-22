@@ -282,3 +282,95 @@ def run_bcos_gine_completeness_check(
         "mae": metrics["mae"],
         "plot_path": str(plot_path) if plot_path is not None else None,
     }
+
+
+def evaluate_bcos_multiclass_node_completeness(
+    model: torch.nn.Module,
+    dataset: Iterable,
+    *,
+    transform=None,
+    device: torch.device | str | None = None,
+) -> dict[str, Any]:
+    if device is None:
+        try:
+            device = next(model.parameters()).device
+        except StopIteration:
+            device = torch.device("cpu")
+    else:
+        device = torch.device(device)
+
+    model = model.to(device)
+    model.eval()
+
+    logits: list[float] = []
+    contrib_sums: list[float] = []
+
+    for data in dataset:
+        data_t = transform(data.clone()) if transform else data.clone()
+        data_t = data_t.to(device)
+
+        edge_attr = getattr(data_t, "edge_attr", None)
+        batch = torch.zeros(data_t.x.size(0), dtype=torch.long, device=device)
+
+        with torch.no_grad():
+            out = model(data_t.x, data_t.edge_index, edge_attr, batch)
+            out_2d = out.view(1, -1) if out.dim() == 1 else out
+            pred_class = int(out_2d.argmax(dim=-1).item())
+            target_logit = float(out_2d[0, pred_class].item())
+
+        node_contrib = explain(
+            model,
+            data_t.x,
+            data_t.edge_index,
+            edge_attr,
+            batch,
+        ).detach()
+
+        logits.append(target_logit)
+        contrib_sums.append(float(node_contrib.sum().item()))
+
+    logits_np = np.asarray(logits, dtype=float)
+    contrib_np = np.asarray(contrib_sums, dtype=float)
+    mae = float(np.mean(np.abs(logits_np - contrib_np))) if logits_np.size > 0 else float("nan")
+
+    return {
+        "num_graphs": int(logits_np.size),
+        "mae": mae,
+        "logits": logits_np,
+        "contrib_sums": contrib_np,
+    }
+
+
+def run_bcos_multiclass_node_completeness_check(
+    model: torch.nn.Module,
+    dataset: Iterable,
+    *,
+    transform=None,
+    device: torch.device | str | None = None,
+    title: str = "B-cos Multiclass Node Completeness Check",
+    output_path: str | Path | None = None,
+) -> dict[str, Any]:
+    metrics = evaluate_bcos_multiclass_node_completeness(
+        model,
+        dataset,
+        transform=transform,
+        device=device,
+    )
+
+    plot_path = None
+    if output_path is not None:
+        plot_path = save_bcos_completeness_scatter(
+            metrics["logits"],
+            metrics["contrib_sums"],
+            title=title,
+            output_path=output_path,
+            mae=metrics["mae"],
+            x_label="Logit for Predicted Class",
+            y_label="Sum of Node Contribution Map",
+        )
+
+    return {
+        "num_graphs": metrics["num_graphs"],
+        "mae": metrics["mae"],
+        "plot_path": str(plot_path) if plot_path is not None else None,
+    }

@@ -9,7 +9,7 @@ from torch_geometric import is_compiling
 from torch_geometric.utils import is_sparse
 from torch_geometric.typing import Size, SparseTensor
 
-from bcosgnn.sanitized_models.bcos_gine_conv import *
+from torch_geometric.nn.conv.gcn_conv import *
 
 
 from typing import List, NamedTuple, Optional, Union
@@ -24,18 +24,18 @@ from torch_geometric.typing import SparseTensor
 
 
 class CollectArgs(NamedTuple):
-    x_j: torch.Tensor
-    edge_attr: torch.Tensor
-    index: torch.Tensor
-    ptr: typing.Optional[torch.Tensor]
-    dim_size: typing.Optional[int]
+    x_j: Tensor
+    edge_weight: Optional[Tensor]
+    index: Tensor
+    ptr: Optional[Tensor]
+    dim_size: Optional[int]
 
 
 def collect(
     self,
     edge_index: Union[Tensor, SparseTensor],
-    x: torch.Tensor,
-    edge_attr: torch.Tensor,
+    x: Tensor,
+    edge_weight: OptTensor,
     size: List[Optional[int]],
 ) -> CollectArgs:
 
@@ -55,9 +55,8 @@ def collect(
                 edge_index_i = ptr2index(ptr, output_size=edge_index_j.numel())
             else:
                 raise ValueError(f"Received invalid layout '{adj_t.layout}'")
-            if edge_attr is None:
-                _value = adj_t.values()
-                edge_attr = None if _value.dim() == 1 else _value
+            if edge_weight is None:
+                edge_weight = adj_t.values()
 
         else:
             edge_index_i = edge_index[i]
@@ -74,13 +73,11 @@ def collect(
         adj_t = edge_index
         edge_index_i, edge_index_j, _value = adj_t.coo()
         ptr, _, _ = adj_t.csr()
-        if edge_attr is None:
-            edge_attr = None if _value is None or _value.dim() == 1 else _value
+        if edge_weight is None:
+            edge_weight = _value
 
     else:
         raise NotImplementedError
-    if torch.jit.is_scripting():
-        assert edge_attr is not None
 
     # Collect user-defined arguments:
     # (1) - Collect `x_j`:
@@ -109,7 +106,7 @@ def collect(
 
     return CollectArgs(
         x_j,
-        edge_attr,
+        edge_weight,
         index,
         ptr,
         dim_size,
@@ -119,23 +116,23 @@ def collect(
 def propagate(
     self,
     edge_index: Union[Tensor, SparseTensor],
-    x: torch.Tensor,
-    edge_attr: torch.Tensor,
+    x: Tensor,
+    edge_weight: OptTensor,
     size: Size = None,
-) -> torch.Tensor:
+) -> Tensor:
 
     # Begin Propagate Forward Pre Hook #########################################
     if not torch.jit.is_scripting() and not is_compiling():
         for hook in self._propagate_forward_pre_hooks.values():
             hook_kwargs = dict(
                 x=x,
-                edge_attr=edge_attr,
+                edge_weight=edge_weight,
             )
             res = hook(self, (edge_index, size, hook_kwargs))
             if res is not None:
                 edge_index, size, hook_kwargs = res
                 x = hook_kwargs['x']
-                edge_attr = hook_kwargs['edge_attr']
+                edge_weight = hook_kwargs['edge_weight']
     # End Propagate Forward Pre Hook ###########################################
 
     mutable_size = self._check_input(edge_index, size)
@@ -150,14 +147,43 @@ def propagate(
                 fuse = True
 
     if fuse:
-        raise NotImplementedError("'message_and_aggregate' not implemented")
+        # Begin Message and Aggregate Forward Pre Hook #########################
+        if not torch.jit.is_scripting() and not is_compiling():
+            for hook in self._message_and_aggregate_forward_pre_hooks.values():
+                hook_kwargs = dict(
+                    x=x,
+                )
+                res = hook(self, (edge_index, hook_kwargs))
+                if res is not None:
+                    edge_index, hook_kwargs = res
+                    x = hook_kwargs['x']
+        # End Message and Aggregate Forward Pre Hook ##########################
+
+        out = self.message_and_aggregate(
+            edge_index,
+            x,
+        )
+
+        # Begin Message and Aggregate Forward Hook #############################
+        if not torch.jit.is_scripting() and not is_compiling():
+            for hook in self._message_and_aggregate_forward_hooks.values():
+                hook_kwargs = dict(
+                    x=x,
+                )
+                res = hook(self, (edge_index, hook_kwargs, ), out)
+                out = res if res is not None else out
+        # End Message and Aggregate Forward Hook ###############################
+
+        out = self.update(
+            out,
+        )
 
     else:
 
         kwargs = self.collect(
             edge_index,
             x,
-            edge_attr,
+            edge_weight,
             mutable_size,
         )
 
@@ -166,14 +192,14 @@ def propagate(
             for hook in self._message_forward_pre_hooks.values():
                 hook_kwargs = dict(
                     x_j=kwargs.x_j,
-                    edge_attr=kwargs.edge_attr,
+                    edge_weight=kwargs.edge_weight,
                 )
                 res = hook(self, (hook_kwargs, ))
                 hook_kwargs = res[0] if isinstance(res, tuple) else res
                 if res is not None:
                     kwargs = CollectArgs(
                         x_j=hook_kwargs['x_j'],
-                        edge_attr=hook_kwargs['edge_attr'],
+                        edge_weight=hook_kwargs['edge_weight'],
                         index=kwargs.index,
                         ptr=kwargs.ptr,
                         dim_size=kwargs.dim_size,
@@ -182,7 +208,7 @@ def propagate(
 
         out = self.message(
             x_j=kwargs.x_j,
-            edge_attr=kwargs.edge_attr,
+            edge_weight=kwargs.edge_weight,
         )
 
         # Begin Message Forward Hook ###########################################
@@ -190,7 +216,7 @@ def propagate(
             for hook in self._message_forward_hooks.values():
                 hook_kwargs = dict(
                     x_j=kwargs.x_j,
-                    edge_attr=kwargs.edge_attr,
+                    edge_weight=kwargs.edge_weight,
                 )
                 res = hook(self, (hook_kwargs, ), out)
                 out = res if res is not None else out
@@ -209,7 +235,7 @@ def propagate(
                 if res is not None:
                     kwargs = CollectArgs(
                         x_j=kwargs.x_j,
-                        edge_attr=kwargs.edge_attr,
+                        edge_weight=kwargs.edge_weight,
                         index=hook_kwargs['index'],
                         ptr=hook_kwargs['ptr'],
                         dim_size=hook_kwargs['dim_size'],
@@ -244,7 +270,7 @@ def propagate(
         for hook in self._propagate_forward_hooks.values():
             hook_kwargs = dict(
                 x=x,
-                edge_attr=edge_attr,
+                edge_weight=edge_weight,
             )
             res = hook(self, (edge_index, mutable_size, hook_kwargs), out)
             out = res if res is not None else out
